@@ -34,7 +34,7 @@ if __name__ == "__main__":
     all_pending_words = set() 
     
     try:
-        with open("data/dummy_data.json", "r", encoding="utf-8") as file:
+        with open("data/real_data.json", "r", encoding="utf-8") as file:
             data = json.load(file)
             
         for video in data:
