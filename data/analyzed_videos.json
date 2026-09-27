@@ -266,24 +266,24 @@
     ],
     "sentiment_summary": {
       "total_analyzed": 50,
-      "positive_percent": 72.0,
-      "negative_percent": 6.0,
-      "neutral_percent": 22.0
+      "positive_percent": 74.0,
+      "negative_percent": 2.0,
+      "neutral_percent": 24.0
     },
     "comments_analyzed": [
       {
         "original_text": "เสียงดีๆๆ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9344702959060669,
+        "ai_score": 0.8814380764961243,
         "analysis_source": "with_context",
         "likes": 0
       },
       {
         "original_text": "เสียงดีค่า",
-        "sentiment_status": "🔴 เชิงลบ (Negative)",
-        "sentiment_value": "NEG",
-        "ai_score": 0.7107652425765991,
+        "sentiment_status": "⚪ กลางๆ (Neutral)",
+        "sentiment_value": "NEU",
+        "ai_score": 0.6234393119812012,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -355,15 +355,15 @@
         "original_text": "ลดเสียงรบกวนได้ดีมาก",
         "sentiment_status": "⚪ กลางๆ (Neutral - Low Confidence)",
         "sentiment_value": "NEU",
-        "ai_score": 0.5787144303321838,
-        "analysis_source": "with_context",
+        "ai_score": 0.5241034030914307,
+        "analysis_source": "comment_only",
         "likes": 0
       },
       {
         "original_text": "คุ้มมากกก",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.916802704334259,
+        "ai_score": 0.6787046194076538,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -427,7 +427,7 @@
         "original_text": "เบสแน่น",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.8857386112213135,
+        "ai_score": 0.9799708127975464,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -441,17 +441,17 @@
       },
       {
         "original_text": "เสียงดีค่า",
-        "sentiment_status": "🔴 เชิงลบ (Negative)",
-        "sentiment_value": "NEG",
-        "ai_score": 0.7107652425765991,
+        "sentiment_status": "⚪ กลางๆ (Neutral)",
+        "sentiment_value": "NEU",
+        "ai_score": 0.6234393119812012,
         "analysis_source": "with_context",
         "likes": 0
       },
       {
         "original_text": "เสียงดีค่า",
-        "sentiment_status": "🔴 เชิงลบ (Negative)",
-        "sentiment_value": "NEG",
-        "ai_score": 0.7107652425765991,
+        "sentiment_status": "⚪ กลางๆ (Neutral)",
+        "sentiment_value": "NEU",
+        "ai_score": 0.6234393119812012,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -539,7 +539,7 @@
         "original_text": "ต้องกดละ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9831624031066895,
+        "ai_score": 0.9536781311035156,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -547,8 +547,8 @@
         "original_text": "เสียงดีเลยย",
         "sentiment_status": "⚪ กลางๆ (Neutral - Low Confidence)",
         "sentiment_value": "NEU",
-        "ai_score": 0.5183168053627014,
-        "analysis_source": "with_context",
+        "ai_score": 0.5543820261955261,
+        "analysis_source": "comment_only",
         "likes": 0
       },
       {
@@ -561,9 +561,9 @@
       },
       {
         "original_text": "ต้องมีแล้ววว",
-        "sentiment_status": "⚪ กลางๆ (Neutral - Low Confidence)",
-        "sentiment_value": "NEU",
-        "ai_score": 0.547374963760376,
+        "sentiment_status": "🟢 เชิงบวก (Positive)",
+        "sentiment_value": "POS",
+        "ai_score": 0.6122062802314758,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -577,9 +577,9 @@
       },
       {
         "original_text": "ดีอ่าา",
-        "sentiment_status": "⚪ กลางๆ (Neutral)",
-        "sentiment_value": "NEU",
-        "ai_score": 0.891607403755188,
+        "sentiment_status": "🔴 เชิงลบ (Negative)",
+        "sentiment_value": "NEG",
+        "ai_score": 0.6099581718444824,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -748,7 +748,7 @@
         "original_text": "ได้กี่ชั่วโมงคะ",
         "sentiment_status": "🟢 เชิงบวก (Positive)",
         "sentiment_value": "POS",
-        "ai_score": 0.8095994591712952,
+        "ai_score": 0.7996701598167419,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -1424,8 +1424,8 @@
     ],
     "sentiment_summary": {
       "total_analyzed": 129,
-      "positive_percent": 12.4031007751938,
-      "negative_percent": 6.976744186046512,
+      "positive_percent": 11.627906976744185,
+      "negative_percent": 7.751937984496124,
       "neutral_percent": 80.62015503875969
     },
     "comments_analyzed": [
@@ -1905,7 +1905,7 @@
         "original_text": "ไปJ206ดีกว่าครับราคาห่างกันนิดเดียว",
         "sentiment_status": "🟢 เชิงบวก (Positive)",
         "sentiment_value": "POS",
-        "ai_score": 0.8376287221908569,
+        "ai_score": 0.7123724222183228,
         "analysis_source": "with_context",
         "likes": 13
       },
@@ -2127,9 +2127,9 @@
       },
       {
         "original_text": "ทำไมมันไม่มีหูฟังอ่า",
-        "sentiment_status": "🟢 เชิงบวก (Positive)",
-        "sentiment_value": "POS",
-        "ai_score": 0.6114049553871155,
+        "sentiment_status": "🔴 เชิงลบ (Negative)",
+        "sentiment_value": "NEG",
+        "ai_score": 0.9317728877067566,
         "analysis_source": "with_context",
         "likes": 3
       },
@@ -2249,7 +2249,7 @@
         "original_text": "ต้องซื้อแแยกค่ให้คลิปปักให้ทั้ง2กระตร้า",
         "sentiment_status": "🟢 เชิงบวก (Positive)",
         "sentiment_value": "POS",
-        "ai_score": 0.8099773526191711,
+        "ai_score": 0.9134172797203064,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -2433,7 +2433,7 @@
         "original_text": "มีให้ในกล่องค่ะ💗",
         "sentiment_status": "🟢 เชิงบวก (Positive)",
         "sentiment_value": "POS",
-        "ai_score": 0.9682301878929138,
+        "ai_score": 0.9648197293281555,
         "analysis_source": "with_context",
         "likes": 1
       },
@@ -3095,9 +3095,9 @@
     ],
     "sentiment_summary": {
       "total_analyzed": 123,
-      "positive_percent": 21.138211382113823,
+      "positive_percent": 16.260162601626014,
       "negative_percent": 26.01626016260163,
-      "neutral_percent": 52.84552845528455
+      "neutral_percent": 57.72357723577236
     },
     "comments_analyzed": [
       {
@@ -3198,10 +3198,10 @@
       },
       {
         "original_text": "สนใจนะค่ะ",
-        "sentiment_status": "🟢 เชิงบวก (Positive)",
-        "sentiment_value": "POS",
-        "ai_score": 0.6947727203369141,
-        "analysis_source": "with_context",
+        "sentiment_status": "⚪ กลางๆ (Neutral - Low Confidence)",
+        "sentiment_value": "NEU",
+        "ai_score": 0.5880605578422546,
+        "analysis_source": "comment_only",
         "likes": 0
       },
       {
@@ -3238,10 +3238,10 @@
       },
       {
         "original_text": "อยากได้ค่ะ",
-        "sentiment_status": "🟢 เชิงบวก (Positive)",
-        "sentiment_value": "POS",
-        "ai_score": 0.9211732745170593,
-        "analysis_source": "with_context",
+        "sentiment_status": "⚪ กลางๆ (Neutral - Low Confidence)",
+        "sentiment_value": "NEU",
+        "ai_score": 0.555665910243988,
+        "analysis_source": "comment_only",
         "likes": 1
       },
       {
@@ -3262,10 +3262,10 @@
       },
       {
         "original_text": "เจ็บหูไหมคะแล้วแบตอึดไหมคะ",
-        "sentiment_status": "🔴 เชิงลบ (Negative)",
-        "sentiment_value": "NEG",
-        "ai_score": 0.7483128905296326,
-        "analysis_source": "with_context",
+        "sentiment_status": "⚪ กลางๆ (Neutral - Low Confidence)",
+        "sentiment_value": "NEU",
+        "ai_score": 0.5640195608139038,
+        "analysis_source": "comment_only",
         "likes": 1
       },
       {
@@ -3294,9 +3294,9 @@
       },
       {
         "original_text": "สั่งแล้วค่ะ",
-        "sentiment_status": "🟢 เชิงบวก (Positive)",
-        "sentiment_value": "POS",
-        "ai_score": 0.7942081093788147,
+        "sentiment_status": "🔴 เชิงลบ (Negative)",
+        "sentiment_value": "NEG",
+        "ai_score": 0.7070811986923218,
         "analysis_source": "with_context",
         "likes": 1
       },
@@ -3312,7 +3312,7 @@
         "original_text": "ดีเลมั้ยคับ",
         "sentiment_status": "🔴 เชิงลบ (Negative)",
         "sentiment_value": "NEG",
-        "ai_score": 0.9466102123260498,
+        "ai_score": 0.9813858866691589,
         "analysis_source": "with_context",
         "likes": 1
       },
@@ -3662,10 +3662,10 @@
       },
       {
         "original_text": "สนใจครับ",
-        "sentiment_status": "🟢 เชิงบวก (Positive)",
-        "sentiment_value": "POS",
-        "ai_score": 0.6473678946495056,
-        "analysis_source": "with_context",
+        "sentiment_status": "⚪ กลางๆ (Neutral - Low Confidence)",
+        "sentiment_value": "NEU",
+        "ai_score": 0.5408222675323486,
+        "analysis_source": "comment_only",
         "likes": 1
       },
       {
@@ -3702,9 +3702,9 @@
       },
       {
         "original_text": "สนใจคับ",
-        "sentiment_status": "🟢 เชิงบวก (Positive)",
-        "sentiment_value": "POS",
-        "ai_score": 0.6022336483001709,
+        "sentiment_status": "⚪ กลางๆ (Neutral - Low Confidence)",
+        "sentiment_value": "NEU",
+        "ai_score": 0.5187833309173584,
         "analysis_source": "with_context",
         "likes": 1
       },
@@ -3950,9 +3950,9 @@
       },
       {
         "original_text": "หนูสั่งไปแล้วค่ะพี่",
-        "sentiment_status": "🟢 เชิงบวก (Positive)",
-        "sentiment_value": "POS",
-        "ai_score": 0.9007763862609863,
+        "sentiment_status": "⚪ กลางๆ (Neutral - Low Confidence)",
+        "sentiment_value": "NEU",
+        "ai_score": 0.5348577499389648,
         "analysis_source": "with_context",
         "likes": 1
       },
@@ -3992,7 +3992,7 @@
         "original_text": "แรกๆจะเจ็บแต่พอใส่เป็นมันก็ไม่เจ็บ😅",
         "sentiment_status": "🔴 เชิงลบ (Negative)",
         "sentiment_value": "NEG",
-        "ai_score": 0.8360012769699097,
+        "ai_score": 0.956122100353241,
         "analysis_source": "with_context",
         "likes": 1
       },
@@ -4040,7 +4040,7 @@
         "original_text": "ทำไม่เล่นไม่ได้/",
         "sentiment_status": "🔴 เชิงลบ (Negative)",
         "sentiment_value": "NEG",
-        "ai_score": 0.9889106750488281,
+        "ai_score": 0.9779250621795654,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -4470,7 +4470,7 @@
         "original_text": "สนใจครับ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9990394711494446,
+        "ai_score": 0.9985533356666565,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -4550,7 +4550,7 @@
         "original_text": "สนใจครับ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9990394711494446,
+        "ai_score": 0.9985533356666565,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -4566,7 +4566,7 @@
         "original_text": "อยากได้จักอัน1คะ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9990741014480591,
+        "ai_score": 0.9979472756385803,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -4598,7 +4598,7 @@
         "original_text": "สนใจครับ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9990394711494446,
+        "ai_score": 0.9985533356666565,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -5055,9 +5055,9 @@
     ],
     "sentiment_summary": {
       "total_analyzed": 66,
-      "positive_percent": 16.666666666666664,
+      "positive_percent": 13.636363636363635,
       "negative_percent": 18.181818181818183,
-      "neutral_percent": 65.15151515151516
+      "neutral_percent": 68.18181818181817
     },
     "comments_analyzed": [
       {
@@ -5240,7 +5240,7 @@
         "original_text": "J237 แบตอึดมั้ยค่ะ",
         "sentiment_status": "🟢 เชิงบวก (Positive)",
         "sentiment_value": "POS",
-        "ai_score": 0.8436338305473328,
+        "ai_score": 0.7719776034355164,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -5256,7 +5256,7 @@
         "original_text": "เน้นฟังเพลงในติ้กตอกเสียงดี ไม่เน้นเกม ตัวไหนดีคะ",
         "sentiment_status": "🟢 เชิงบวก (Positive)",
         "sentiment_value": "POS",
-        "ai_score": 0.8847700357437134,
+        "ai_score": 0.7948183417320251,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -5304,7 +5304,7 @@
         "original_text": "สตเรายังหาเคสไม่ได้เลยค่ะเราลองซื้ิอเคส AirPods3มาตามคนในเม้นตตเเต่มันใส่ได้เเค่ข้างล้างข้างบนใส่ไม่ได้ค่ะไม่😭😭",
         "sentiment_status": "🔴 เชิงลบ (Negative)",
         "sentiment_value": "NEG",
-        "ai_score": 0.607629120349884,
+        "ai_score": 0.7466934323310852,
         "analysis_source": "with_context",
         "likes": 15
       },
@@ -5318,10 +5318,10 @@
       },
       {
         "original_text": "J237 นะคะ เบากว่า เล็กกว่า",
-        "sentiment_status": "🟢 เชิงบวก (Positive)",
-        "sentiment_value": "POS",
-        "ai_score": 0.72149258852005,
-        "analysis_source": "with_context",
+        "sentiment_status": "⚪ กลางๆ (Neutral - Low Confidence)",
+        "sentiment_value": "NEU",
+        "ai_score": 0.5936812162399292,
+        "analysis_source": "comment_only",
         "likes": 3
       },
       {
@@ -5494,17 +5494,17 @@
       },
       {
         "original_text": "201ทั้งใจ ตอนนี้เหลือข้างนึงยังพยายามใช้ต่อ586688",
-        "sentiment_status": "🟢 เชิงบวก (Positive)",
-        "sentiment_value": "POS",
-        "ai_score": 0.71000736951828,
-        "analysis_source": "with_context",
+        "sentiment_status": "⚪ กลางๆ (Neutral - Low Confidence)",
+        "sentiment_value": "NEU",
+        "ai_score": 0.5836756825447083,
+        "analysis_source": "comment_only",
         "likes": 4
       },
       {
         "original_text": "ถ้าเทียบกับเสียงอันไหนดังฟังชัดกว่ากันคั้บ",
         "sentiment_status": "⚪ กลางๆ (Neutral - Low Confidence)",
         "sentiment_value": "NEU",
-        "ai_score": 0.5968106389045715,
+        "ai_score": 0.5045220255851746,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -5584,7 +5584,7 @@
         "original_text": "ใช้ได้ค่ะ💗",
         "sentiment_status": "🟢 เชิงบวก (Positive)",
         "sentiment_value": "POS",
-        "ai_score": 0.6337535381317139,
+        "ai_score": 0.6156355142593384,
         "analysis_source": "with_context",
         "likes": 2
       }
@@ -5714,7 +5714,7 @@
         "original_text": "สนใจค่ะ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9983460903167725,
+        "ai_score": 0.9983770847320557,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -5730,7 +5730,7 @@
         "original_text": "สนใจคับ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9965419173240662,
+        "ai_score": 0.9977782368659973,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -6272,8 +6272,8 @@
     "sentiment_summary": {
       "total_analyzed": 102,
       "positive_percent": 19.607843137254903,
-      "negative_percent": 8.823529411764707,
-      "neutral_percent": 71.56862745098039
+      "negative_percent": 9.803921568627452,
+      "neutral_percent": 70.58823529411765
     },
     "comments_analyzed": [
       {
@@ -6296,7 +6296,7 @@
         "original_text": "แบตอึดมั้ยครับ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9578432440757751,
+        "ai_score": 0.9116485714912415,
         "analysis_source": "with_context",
         "likes": 6
       },
@@ -6320,7 +6320,7 @@
         "original_text": "มีคนสั่งไปแล้วดค้าบอกสีดำเบสแน่น จิงมั้ยค่ะ อยากได้เบสแน่นๆค่ะ ขอคำแนะนำด้วยค่ะ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9934883117675781,
+        "ai_score": 0.9747913479804993,
         "analysis_source": "with_context",
         "likes": 1
       },
@@ -6438,10 +6438,10 @@
       },
       {
         "original_text": "เล่นเกมดีเลย์ มากมั้ยคับ",
-        "sentiment_status": "⚪ กลางๆ (Neutral)",
+        "sentiment_status": "⚪ กลางๆ (Neutral - Low Confidence)",
         "sentiment_value": "NEU",
-        "ai_score": 0.6167770028114319,
-        "analysis_source": "with_context",
+        "ai_score": 0.5644867420196533,
+        "analysis_source": "comment_only",
         "likes": 1
       },
       {
@@ -6640,7 +6640,7 @@
         "original_text": "สั่งแล้วค่ะ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.8969055414199829,
+        "ai_score": 0.7778661847114563,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -6688,7 +6688,7 @@
         "original_text": "รีวิในตะกร้านะครับ ราคาคุ้มรุ่นนี้",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.938331663608551,
+        "ai_score": 0.855209231376648,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -6928,7 +6928,7 @@
         "original_text": "เวลาเล่นเกมเสียงมันเท่ากันม่ายครับ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9332953691482544,
+        "ai_score": 0.8376572728157043,
         "analysis_source": "with_context",
         "likes": 1
       },
@@ -6950,9 +6950,9 @@
       },
       {
         "original_text": "เบาสบายหูครับ",
-        "sentiment_status": "⚪ กลางๆ (Neutral - Low Confidence)",
-        "sentiment_value": "NEU",
-        "ai_score": 0.5286704301834106,
+        "sentiment_status": "🔴 เชิงลบ (Negative)",
+        "sentiment_value": "NEG",
+        "ai_score": 0.8857994079589844,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -7032,7 +7032,7 @@
         "original_text": "ใช้ได้ครับ เชื่อมต่อผ่านบลูทูธ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.8125636577606201,
+        "ai_score": 0.7755653858184814,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -7040,7 +7040,7 @@
         "original_text": "ใช้ได้ครับ เชื่อมต่อผ่านบลูทูธ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.8125636577606201,
+        "ai_score": 0.7755653858184814,
         "analysis_source": "with_context",
         "likes": 1
       },
@@ -7056,7 +7056,7 @@
         "original_text": "ใช้ได้ครับ เชื่อมต่อผ่านบลูทูธ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.8125636577606201,
+        "ai_score": 0.7755653858184814,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -7432,7 +7432,7 @@
         "original_text": "สนใจค่ะ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9989401698112488,
+        "ai_score": 0.9993151426315308,
         "analysis_source": "with_context",
         "likes": 1
       },
@@ -7456,7 +7456,7 @@
         "original_text": "พี่คะ สอนชาตหน่อยคะ555555",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9974467754364014,
+        "ai_score": 0.9983322024345398,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -7512,7 +7512,7 @@
         "original_text": "สนใจค่ะ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9989401698112488,
+        "ai_score": 0.9993151426315308,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -7616,7 +7616,7 @@
         "original_text": "เพิ่งรู้นะเนี่ยว่ากันน้ำได้😅",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9977103471755981,
+        "ai_score": 0.9944854378700256,
         "analysis_source": "with_context",
         "likes": 3
       },
@@ -7648,7 +7648,7 @@
         "original_text": "ได้ครับ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9990677237510681,
+        "ai_score": 0.9989485144615173,
         "analysis_source": "with_context",
         "likes": 1
       },
@@ -7672,7 +7672,7 @@
         "original_text": "ได้ครับ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9990677237510681,
+        "ai_score": 0.9989485144615173,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -7742,10 +7742,10 @@
       },
       {
         "original_text": "ดังสะใจจนไม่ได้ยินเสียงพี่เรียก😂",
-        "sentiment_status": "⚪ กลางๆ (Neutral)",
+        "sentiment_status": "⚪ กลางๆ (Neutral - Low Confidence)",
         "sentiment_value": "NEU",
-        "ai_score": 0.8771243691444397,
-        "analysis_source": "with_context",
+        "ai_score": 0.5861602425575256,
+        "analysis_source": "comment_only",
         "likes": 0
       },
       {
@@ -7800,7 +7800,7 @@
         "original_text": "[น้ำตาแห่งความสุข][น้ำตาแห่งความสุข][น้ำตาแห่งความสุข]",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9985707998275757,
+        "ai_score": 0.99872225522995,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -7840,7 +7840,7 @@
         "original_text": "ได้ครับ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9990677237510681,
+        "ai_score": 0.9989485144615173,
         "analysis_source": "with_context",
         "likes": 0
       }
@@ -8121,7 +8121,7 @@
         "original_text": "สนใจครับ",
         "sentiment_status": "🔴 เชิงลบ (Negative)",
         "sentiment_value": "NEG",
-        "ai_score": 0.6042629480361938,
+        "ai_score": 0.6293540596961975,
         "analysis_source": "with_context",
         "likes": 1
       },
@@ -8225,7 +8225,7 @@
         "original_text": "จริงคับ",
         "sentiment_status": "🔴 เชิงลบ (Negative)",
         "sentiment_value": "NEG",
-        "ai_score": 0.8661316633224487,
+        "ai_score": 0.7692081332206726,
         "analysis_source": "with_context",
         "likes": 1
       },
@@ -8241,7 +8241,7 @@
         "original_text": "สนใจครับ",
         "sentiment_status": "🔴 เชิงลบ (Negative)",
         "sentiment_value": "NEG",
-        "ai_score": 0.6042629480361938,
+        "ai_score": 0.6293540596961975,
         "analysis_source": "with_context",
         "likes": 1
       },
@@ -8297,7 +8297,7 @@
         "original_text": "ใช่ค่ะกดเลือกภาษาได้ค่ะแต่ว่าถ้าจะเอาตัวที่แปลภาษาได้ให้เลือกซื้อตัวที่มีคำว่า ai นะคะ",
         "sentiment_status": "🔴 เชิงลบ (Negative)",
         "sentiment_value": "NEG",
-        "ai_score": 0.6963342428207397,
+        "ai_score": 0.7074990272521973,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -8321,7 +8321,7 @@
         "original_text": "เล่นเกมไม่ ดีเลย์ค่ะถ้าดีเลย์ก็น้อยมากๆค่ะตัวนี้บลูทูธ 6.0 เชื่อมต่อเสถียรค่ะ",
         "sentiment_status": "🔴 เชิงลบ (Negative)",
         "sentiment_value": "NEG",
-        "ai_score": 0.8053464889526367,
+        "ai_score": 0.762736439704895,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -8337,7 +8337,7 @@
         "original_text": "ถ้าเทียบกัน รุ่นนี้เสียงเบสแน่นกว่า และก็ลดเสียงรบกวนได้ดีกว่าค่ะ",
         "sentiment_status": "🔴 เชิงลบ (Negative)",
         "sentiment_value": "NEG",
-        "ai_score": 0.7846596240997314,
+        "ai_score": 0.7793126106262207,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -8842,16 +8842,16 @@
     ],
     "sentiment_summary": {
       "total_analyzed": 12,
-      "positive_percent": 25.0,
-      "negative_percent": 16.666666666666664,
+      "positive_percent": 16.666666666666664,
+      "negative_percent": 25.0,
       "neutral_percent": 58.333333333333336
     },
     "comments_analyzed": [
       {
         "original_text": "เลือกรุ่นไหนดีคะ",
-        "sentiment_status": "🟢 เชิงบวก (Positive)",
-        "sentiment_value": "POS",
-        "ai_score": 0.7089455723762512,
+        "sentiment_status": "🔴 เชิงลบ (Negative)",
+        "sentiment_value": "NEG",
+        "ai_score": 0.640167236328125,
         "analysis_source": "with_context",
         "likes": 1
       },
@@ -9397,7 +9397,7 @@
         "original_text": "สนใจค่ะ",
         "sentiment_status": "🟢 เชิงบวก (Positive)",
         "sentiment_value": "POS",
-        "ai_score": 0.8957558870315552,
+        "ai_score": 0.9684017896652222,
         "analysis_source": "with_context",
         "likes": 1
       },
@@ -9721,7 +9721,7 @@
         "original_text": "มีแบบที่ตัวหูมันสั้นไหมคะหนูแอบใส่ในห้องไม่ได้",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9363983869552612,
+        "ai_score": 0.9399654865264893,
         "analysis_source": "with_context",
         "likes": 2
       },
@@ -10200,7 +10200,7 @@
         "original_text": "สนใจค่ะ",
         "sentiment_status": "🟢 เชิงบวก (Positive)",
         "sentiment_value": "POS",
-        "ai_score": 0.8362453579902649,
+        "ai_score": 0.9129717350006104,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -10224,7 +10224,7 @@
         "original_text": "สนใจครับ",
         "sentiment_status": "🟢 เชิงบวก (Positive)",
         "sentiment_value": "POS",
-        "ai_score": 0.8638035655021667,
+        "ai_score": 0.914604902267456,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -10272,7 +10272,7 @@
         "original_text": "สนใจค่ะ",
         "sentiment_status": "🟢 เชิงบวก (Positive)",
         "sentiment_value": "POS",
-        "ai_score": 0.8362453579902649,
+        "ai_score": 0.9129717350006104,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -10870,7 +10870,7 @@
         "original_text": "Samsung Galaxy s23 fe แนะนำหน่อยครับ",
         "sentiment_status": "🟢 เชิงบวก (Positive)",
         "sentiment_value": "POS",
-        "ai_score": 0.9709078669548035,
+        "ai_score": 0.9770988821983337,
         "analysis_source": "with_context",
         "likes": 1
       },
@@ -10902,7 +10902,7 @@
         "original_text": "ลองใช้กับ Xiaomi 17T มันไม่ขึ้น 67w max แก้ได้ไหมครับ ตรงจอก็ขึ้นกำลังวัตต์แค่ 15+ เองครับไม่ถึง 20w เลย",
         "sentiment_status": "🟢 เชิงบวก (Positive)",
         "sentiment_value": "POS",
-        "ai_score": 0.8895725607872009,
+        "ai_score": 0.9297964572906494,
         "analysis_source": "with_context",
         "likes": 1
       },
@@ -11142,7 +11142,7 @@
         "original_text": "คุ้มมากกกกกก 🥰",
         "sentiment_status": "🟢 เชิงบวก (Positive)",
         "sentiment_value": "POS",
-        "ai_score": 0.9857012033462524,
+        "ai_score": 0.9873425960540771,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -11158,7 +11158,7 @@
         "original_text": "iPhone 11 ใช้ได้ครับ เลือกเป็นหัว Lightning นะ 🙂",
         "sentiment_status": "🟢 เชิงบวก (Positive)",
         "sentiment_value": "POS",
-        "ai_score": 0.9577484130859375,
+        "ai_score": 0.964504063129425,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -11174,7 +11174,7 @@
         "original_text": "ได้ครับ",
         "sentiment_status": "🟢 เชิงบวก (Positive)",
         "sentiment_value": "POS",
-        "ai_score": 0.9746707677841187,
+        "ai_score": 0.9767518043518066,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -11182,7 +11182,7 @@
         "original_text": "ได้ครับ",
         "sentiment_status": "🟢 เชิงบวก (Positive)",
         "sentiment_value": "POS",
-        "ai_score": 0.9746707677841187,
+        "ai_score": 0.9767518043518066,
         "analysis_source": "with_context",
         "likes": 1
       },
@@ -11254,7 +11254,7 @@
         "original_text": "ได้ครับ",
         "sentiment_status": "🟢 เชิงบวก (Positive)",
         "sentiment_value": "POS",
-        "ai_score": 0.9746707677841187,
+        "ai_score": 0.9767518043518066,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -11270,7 +11270,7 @@
         "original_text": "ได้ครับ",
         "sentiment_status": "🟢 เชิงบวก (Positive)",
         "sentiment_value": "POS",
-        "ai_score": 0.9746707677841187,
+        "ai_score": 0.9767518043518066,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -11494,7 +11494,7 @@
         "original_text": "ได้ครับ",
         "sentiment_status": "🟢 เชิงบวก (Positive)",
         "sentiment_value": "POS",
-        "ai_score": 0.9746707677841187,
+        "ai_score": 0.9767518043518066,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -11502,7 +11502,7 @@
         "original_text": "ได้ครับ Samsung Galaxy A17 5G รองรับชาร์จเร็วสูงสุด 25W ครับ สายเส้นนี้ใช้งานได้เลยครับ",
         "sentiment_status": "🟢 เชิงบวก (Positive)",
         "sentiment_value": "POS",
-        "ai_score": 0.9518682956695557,
+        "ai_score": 0.9628556370735168,
         "analysis_source": "with_context",
         "likes": 1
       },
@@ -11590,7 +11590,7 @@
         "original_text": "ถ้างบจำกัดแนะนำ Tranyoo 45w เลยครับ 😊",
         "sentiment_status": "🟢 เชิงบวก (Positive)",
         "sentiment_value": "POS",
-        "ai_score": 0.9858341813087463,
+        "ai_score": 0.9868534803390503,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -11606,7 +11606,7 @@
         "original_text": "ใช่ครับ ถ้าตอนแรกได้ประมาณ 25W แล้วค่อยลดเหลือ 4W ถือว่าปกติครับ มือถือจะปรับกำลังชาร์จเองตามเปอร์เซ็นต์แบตและอุณหภูมิครับ",
         "sentiment_status": "🟢 เชิงบวก (Positive)",
         "sentiment_value": "POS",
-        "ai_score": 0.7901182770729065,
+        "ai_score": 0.8752589821815491,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -11630,7 +11630,7 @@
         "original_text": "ได้ครับ ใช้งานได้เหมือนกัน",
         "sentiment_status": "🟢 เชิงบวก (Positive)",
         "sentiment_value": "POS",
-        "ai_score": 0.9757010340690613,
+        "ai_score": 0.9778674840927124,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -11935,8 +11935,8 @@
     "sentiment_summary": {
       "total_analyzed": 53,
       "positive_percent": 15.09433962264151,
-      "negative_percent": 49.056603773584904,
-      "neutral_percent": 35.84905660377358
+      "negative_percent": 50.943396226415096,
+      "neutral_percent": 33.9622641509434
     },
     "comments_analyzed": [
       {
@@ -11973,18 +11973,18 @@
       },
       {
         "original_text": "สนใจครับ",
-        "sentiment_status": "⚪ กลางๆ (Neutral)",
+        "sentiment_status": "⚪ กลางๆ (Neutral - Low Confidence)",
         "sentiment_value": "NEU",
-        "ai_score": 0.8346294164657593,
-        "analysis_source": "with_context",
+        "ai_score": 0.5408222675323486,
+        "analysis_source": "comment_only",
         "likes": 0
       },
       {
         "original_text": "สนใจค่ะ",
-        "sentiment_status": "⚪ กลางๆ (Neutral)",
+        "sentiment_status": "⚪ กลางๆ (Neutral - Low Confidence)",
         "sentiment_value": "NEU",
-        "ai_score": 0.6329414248466492,
-        "analysis_source": "with_context",
+        "ai_score": 0.5617430210113525,
+        "analysis_source": "comment_only",
         "likes": 0
       },
       {
@@ -12111,8 +12111,8 @@
         "original_text": "ถูกเกิ้นไม่กล้าซื้อ",
         "sentiment_status": "⚪ กลางๆ (Neutral - Low Confidence)",
         "sentiment_value": "NEU",
-        "ai_score": 0.4665466248989105,
-        "analysis_source": "with_context",
+        "ai_score": 0.593421459197998,
+        "analysis_source": "comment_only",
         "likes": 0
       },
       {
@@ -12181,9 +12181,9 @@
       },
       {
         "original_text": "ปังๆจ้า🥰🥰",
-        "sentiment_status": "⚪ กลางๆ (Neutral - Low Confidence)",
-        "sentiment_value": "NEU",
-        "ai_score": 0.4705582559108734,
+        "sentiment_status": "🔴 เชิงลบ (Negative)",
+        "sentiment_value": "NEG",
+        "ai_score": 0.6730988621711731,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -12894,7 +12894,7 @@
         "original_text": "ได้ครับ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.998375654220581,
+        "ai_score": 0.9988510608673096,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -12926,7 +12926,7 @@
         "original_text": "ตะกร้าที่สามกับตะกร้าที่ห้าได้เลยครับ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9987516403198242,
+        "ai_score": 0.998708963394165,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -12934,7 +12934,7 @@
         "original_text": "ตะกร้าที่สามกับตะกร้าที่ห้าได้เลยครับ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9987516403198242,
+        "ai_score": 0.998708963394165,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -14674,7 +14674,7 @@
         "original_text": "สนใจคับ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9936293959617615,
+        "ai_score": 0.9923000335693359,
         "analysis_source": "with_context",
         "likes": 1
       },
@@ -14816,9 +14816,9 @@
       },
       {
         "original_text": "ราคาไม่แพงค่ะ\nแบบชุดราคาร้อยต้นๆ ถ้าเฉพาะสายอย่างเดียวราคาหลักสิบ สนใจกดดูสินค้าในตะกร้าได้เลยค่าา🙏🥰",
-        "sentiment_status": "⚪ กลางๆ (Neutral - Low Confidence)",
+        "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.598290205001831,
+        "ai_score": 0.7532758712768555,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -15411,9 +15411,9 @@
     ],
     "sentiment_summary": {
       "total_analyzed": 74,
-      "positive_percent": 12.162162162162163,
+      "positive_percent": 10.81081081081081,
       "negative_percent": 13.513513513513514,
-      "neutral_percent": 74.32432432432432
+      "neutral_percent": 75.67567567567568
     },
     "comments_analyzed": [
       {
@@ -15434,9 +15434,9 @@
       },
       {
         "original_text": "มีแต่คนจะซื้อ คนซื้อแล้ว คุณภาพเป็นยังบ้าง???",
-        "sentiment_status": "🟢 เชิงบวก (Positive)",
-        "sentiment_value": "POS",
-        "ai_score": 0.6594457030296326,
+        "sentiment_status": "⚪ กลางๆ (Neutral - Low Confidence)",
+        "sentiment_value": "NEU",
+        "ai_score": 0.5945045948028564,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -15716,8 +15716,8 @@
         "original_text": "ซัมซุง น่ากังวล ใช้ได้ตรงปกไหม",
         "sentiment_status": "⚪ กลางๆ (Neutral - Low Confidence)",
         "sentiment_value": "NEU",
-        "ai_score": 0.5555707216262817,
-        "analysis_source": "with_context",
+        "ai_score": 0.5456644296646118,
+        "analysis_source": "comment_only",
         "likes": 5
       },
       {
@@ -15972,7 +15972,7 @@
         "original_text": "สนใจค่ะ",
         "sentiment_status": "🟢 เชิงบวก (Positive)",
         "sentiment_value": "POS",
-        "ai_score": 0.6655700206756592,
+        "ai_score": 0.7145447731018066,
         "analysis_source": "with_context",
         "likes": 1
       },
@@ -15980,7 +15980,7 @@
         "original_text": "หัวชาร์จเท่าไหร่ครับอยากได้หัวชาร์จด้วย",
         "sentiment_status": "🟢 เชิงบวก (Positive)",
         "sentiment_value": "POS",
-        "ai_score": 0.768535852432251,
+        "ai_score": 0.8276186585426331,
         "analysis_source": "with_context",
         "likes": 2
       },
@@ -16598,7 +16598,7 @@
         "original_text": "รุ่นอะไรคะ🥰",
         "sentiment_status": "🟢 เชิงบวก (Positive)",
         "sentiment_value": "POS",
-        "ai_score": 0.7136304974555969,
+        "ai_score": 0.7994011640548706,
         "analysis_source": "with_context",
         "likes": 1
       },
@@ -16718,7 +16718,7 @@
         "original_text": "รุ่นอะไรคะ🥰🥰🥰",
         "sentiment_status": "🟢 เชิงบวก (Positive)",
         "sentiment_value": "POS",
-        "ai_score": 0.6795098185539246,
+        "ai_score": 0.740149974822998,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -17981,7 +17981,7 @@
         "original_text": "เลือกไม่เป็น\nรุ่นซัมซุงA53ใช้แบบไหน?",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9438069462776184,
+        "ai_score": 0.719538152217865,
         "analysis_source": "with_context",
         "likes": 1
       },
@@ -19169,7 +19169,7 @@
         "original_text": "สายยาว 1.2 เมตร 🥰",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9425554871559143,
+        "ai_score": 0.6500563025474548,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -19698,7 +19698,7 @@
         "original_text": "สั่งแล้วค่ะ",
         "sentiment_status": "🟢 เชิงบวก (Positive)",
         "sentiment_value": "POS",
-        "ai_score": 0.9665661454200745,
+        "ai_score": 0.9159142971038818,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -19730,7 +19730,7 @@
         "original_text": "สั่งแล้วค่ะ",
         "sentiment_status": "🟢 เชิงบวก (Positive)",
         "sentiment_value": "POS",
-        "ai_score": 0.9665661454200745,
+        "ai_score": 0.9159142971038818,
         "analysis_source": "with_context",
         "likes": 1
       },
@@ -20090,9 +20090,9 @@
     ],
     "sentiment_summary": {
       "total_analyzed": 61,
-      "positive_percent": 11.475409836065573,
-      "negative_percent": 13.114754098360656,
-      "neutral_percent": 75.40983606557377
+      "positive_percent": 13.114754098360656,
+      "negative_percent": 9.836065573770492,
+      "neutral_percent": 77.04918032786885
     },
     "comments_analyzed": [
       {
@@ -20321,9 +20321,9 @@
       },
       {
         "original_text": "ใช่ดีจริง",
-        "sentiment_status": "🔴 เชิงลบ (Negative)",
-        "sentiment_value": "NEG",
-        "ai_score": 0.6287879943847656,
+        "sentiment_status": "🟢 เชิงบวก (Positive)",
+        "sentiment_value": "POS",
+        "ai_score": 0.6947364807128906,
         "analysis_source": "with_context",
         "likes": 2
       },
@@ -20355,8 +20355,8 @@
         "original_text": "เฉียบสุดๆ",
         "sentiment_status": "⚪ กลางๆ (Neutral - Low Confidence)",
         "sentiment_value": "NEU",
-        "ai_score": 0.47916197776794434,
-        "analysis_source": "with_context",
+        "ai_score": 0.5796725749969482,
+        "analysis_source": "comment_only",
         "likes": 2
       },
       {
@@ -20417,10 +20417,10 @@
       },
       {
         "original_text": "อันนี้ก็ใช้ได้นะครับ",
-        "sentiment_status": "🔴 เชิงลบ (Negative)",
-        "sentiment_value": "NEG",
-        "ai_score": 0.6381106376647949,
-        "analysis_source": "with_context",
+        "sentiment_status": "⚪ กลางๆ (Neutral - Low Confidence)",
+        "sentiment_value": "NEU",
+        "ai_score": 0.5963386297225952,
+        "analysis_source": "comment_only",
         "likes": 1
       },
       {
@@ -20443,7 +20443,7 @@
         "original_text": "ใครได้น้อยกว่านี้บ้าง",
         "sentiment_status": "🔴 เชิงลบ (Negative)",
         "sentiment_value": "NEG",
-        "ai_score": 0.9564120769500732,
+        "ai_score": 0.9953064322471619,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -20678,8 +20678,8 @@
     "sentiment_summary": {
       "total_analyzed": 15,
       "positive_percent": 0.0,
-      "negative_percent": 13.333333333333334,
-      "neutral_percent": 86.66666666666667
+      "negative_percent": 20.0,
+      "neutral_percent": 80.0
     },
     "comments_analyzed": [
       {
@@ -20740,9 +20740,9 @@
       },
       {
         "original_text": "ผมชาร์จไม่เข้าอะครับ",
-        "sentiment_status": "⚪ กลางๆ (Neutral)",
-        "sentiment_value": "NEU",
-        "ai_score": 0.7638649940490723,
+        "sentiment_status": "🔴 เชิงลบ (Negative)",
+        "sentiment_value": "NEG",
+        "ai_score": 0.9729689955711365,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -20782,7 +20782,7 @@
         "original_text": "ได้ครับ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9992176294326782,
+        "ai_score": 0.9993337988853455,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -20790,7 +20790,7 @@
         "original_text": "ได้ครับ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9992176294326782,
+        "ai_score": 0.9993337988853455,
         "analysis_source": "with_context",
         "likes": 1
       },
@@ -21145,7 +21145,7 @@
         "original_text": "อยากได้ค่ะ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9948247671127319,
+        "ai_score": 0.9938912391662598,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -22751,7 +22751,7 @@
         "original_text": "ใช้ดีจริงไหมคะ",
         "sentiment_status": "🟢 เชิงบวก (Positive)",
         "sentiment_value": "POS",
-        "ai_score": 0.7385136485099792,
+        "ai_score": 0.7301650047302246,
         "analysis_source": "with_context",
         "likes": 3
       },
@@ -22951,7 +22951,7 @@
         "original_text": "ใช้ได้ค่าา🥰",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9019973874092102,
+        "ai_score": 0.9784871935844421,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -23143,7 +23143,7 @@
         "original_text": "ใช้ได้ค่าา",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.8914958834648132,
+        "ai_score": 0.9867663383483887,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -23327,7 +23327,7 @@
         "original_text": "ใช้ได้ค่ะ☺️",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.899169921875,
+        "ai_score": 0.9811285734176636,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -23781,9 +23781,9 @@
     ],
     "sentiment_summary": {
       "total_analyzed": 51,
-      "positive_percent": 66.66666666666666,
+      "positive_percent": 72.54901960784314,
       "negative_percent": 1.9607843137254901,
-      "neutral_percent": 31.372549019607842
+      "neutral_percent": 25.49019607843137
     },
     "comments_analyzed": [
       {
@@ -23844,10 +23844,10 @@
       },
       {
         "original_text": "ดีค่าา",
-        "sentiment_status": "⚪ กลางๆ (Neutral)",
+        "sentiment_status": "⚪ กลางๆ (Neutral - Low Confidence)",
         "sentiment_value": "NEU",
-        "ai_score": 0.657689094543457,
-        "analysis_source": "with_context",
+        "ai_score": 0.5795269012451172,
+        "analysis_source": "comment_only",
         "likes": 1
       },
       {
@@ -23860,10 +23860,10 @@
       },
       {
         "original_text": "ใช้ดีค่า",
-        "sentiment_status": "⚪ กลางๆ (Neutral)",
+        "sentiment_status": "⚪ กลางๆ (Neutral - Low Confidence)",
         "sentiment_value": "NEU",
-        "ai_score": 0.6997385621070862,
-        "analysis_source": "with_context",
+        "ai_score": 0.559857964515686,
+        "analysis_source": "comment_only",
         "likes": 1
       },
       {
@@ -23940,10 +23940,10 @@
       },
       {
         "original_text": "ใช้ดีค่า",
-        "sentiment_status": "⚪ กลางๆ (Neutral)",
+        "sentiment_status": "⚪ กลางๆ (Neutral - Low Confidence)",
         "sentiment_value": "NEU",
-        "ai_score": 0.6997385621070862,
-        "analysis_source": "with_context",
+        "ai_score": 0.559857964515686,
+        "analysis_source": "comment_only",
         "likes": 1
       },
       {
@@ -23996,9 +23996,9 @@
       },
       {
         "original_text": "ทนมาก",
-        "sentiment_status": "⚪ กลางๆ (Neutral - Low Confidence)",
-        "sentiment_value": "NEU",
-        "ai_score": 0.44190576672554016,
+        "sentiment_status": "🟢 เชิงบวก (Positive)",
+        "sentiment_value": "POS",
+        "ai_score": 0.6995518803596497,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -24020,10 +24020,10 @@
       },
       {
         "original_text": "ใช้ดีค่า",
-        "sentiment_status": "⚪ กลางๆ (Neutral)",
+        "sentiment_status": "⚪ กลางๆ (Neutral - Low Confidence)",
         "sentiment_value": "NEU",
-        "ai_score": 0.6997385621070862,
-        "analysis_source": "with_context",
+        "ai_score": 0.559857964515686,
+        "analysis_source": "comment_only",
         "likes": 1
       },
       {
@@ -24068,9 +24068,9 @@
       },
       {
         "original_text": "ใช้ดีทนมาก",
-        "sentiment_status": "⚪ กลางๆ (Neutral - Low Confidence)",
-        "sentiment_value": "NEU",
-        "ai_score": 0.4360249936580658,
+        "sentiment_status": "🟢 เชิงบวก (Positive)",
+        "sentiment_value": "POS",
+        "ai_score": 0.6532923579216003,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -24140,9 +24140,9 @@
       },
       {
         "original_text": "ทนมาก",
-        "sentiment_status": "⚪ กลางๆ (Neutral - Low Confidence)",
-        "sentiment_value": "NEU",
-        "ai_score": 0.44190576672554016,
+        "sentiment_status": "🟢 เชิงบวก (Positive)",
+        "sentiment_value": "POS",
+        "ai_score": 0.6995518803596497,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -24412,9 +24412,9 @@
       },
       {
         "original_text": "หนักค่ะ แต่น้องอึดมาก",
-        "sentiment_status": "⚪ กลางๆ (Neutral - Low Confidence)",
+        "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.4589812755584717,
+        "ai_score": 0.8365649580955505,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -24738,7 +24738,7 @@
         "original_text": "ราคานี้ได้30Ahจริงเหรอครับ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.998836100101471,
+        "ai_score": 0.9929817914962769,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -24826,7 +24826,7 @@
         "original_text": "ราคาไม่แพง ใช้เป็นแบตเตอรี่สำรองได้เลยคะ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9916757345199585,
+        "ai_score": 0.9963405728340149,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -25826,7 +25826,7 @@
         "original_text": "รุ่นเดียวกันค่ะขนาดไหนก็ได้ถ้าขนาดใหญ่ก็ใช้ได้นานหน่อย",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9692937135696411,
+        "ai_score": 0.9912225008010864,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -25858,7 +25858,7 @@
         "original_text": "สั่งื้อ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9971436858177185,
+        "ai_score": 0.9962568283081055,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -25890,7 +25890,7 @@
         "original_text": "สนใจครับ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9983591437339783,
+        "ai_score": 0.9979807734489441,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -26058,7 +26058,7 @@
         "original_text": "พัดลมแบบขั้วเหมือนกันเลยค่ะใช้ได้แน่นอน",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.907288134098053,
+        "ai_score": 0.9321469068527222,
         "analysis_source": "with_context",
         "likes": 1
       },
@@ -26162,7 +26162,7 @@
         "original_text": "กลัวสั่งแล้วใช้ไม่ใด้",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9933961033821106,
+        "ai_score": 0.9914583563804626,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -26444,7 +26444,7 @@
         "original_text": "ลองใช้ได้ 3-4 รอบชาร์จครับ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9039474725723267,
+        "ai_score": 0.9571632146835327,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -26508,7 +26508,7 @@
         "original_text": "ใช้ได้ครับ ลองใช้กับสายยาว 1-2 เมตร ชาร์จได้ปกติครับ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.8307647705078125,
+        "ai_score": 0.9176324009895325,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -26697,7 +26697,7 @@
         "original_text": "ได้ครับ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9977072477340698,
+        "ai_score": 0.9980010390281677,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -26705,7 +26705,7 @@
         "original_text": "ได้ครับ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9977072477340698,
+        "ai_score": 0.9980010390281677,
         "analysis_source": "with_context",
         "likes": 1
       },
@@ -26713,7 +26713,7 @@
         "original_text": "ได้ครับ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9977072477340698,
+        "ai_score": 0.9980010390281677,
         "analysis_source": "with_context",
         "likes": 0
       }
@@ -27096,7 +27096,7 @@
         "original_text": "สนใจครับ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9965760111808777,
+        "ai_score": 0.9972395896911621,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -27144,7 +27144,7 @@
         "original_text": "อยากได้แบบมีหัวชาร์จด้วยต้องซื้อรุ่นไหนครับ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9951316118240356,
+        "ai_score": 0.9959048628807068,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -27216,7 +27216,7 @@
         "original_text": "สั่งแล้วค่ะ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9633504152297974,
+        "ai_score": 0.9908437728881836,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -27288,7 +27288,7 @@
         "original_text": "อยากได้คับ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9790449738502502,
+        "ai_score": 0.9895638823509216,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -27629,7 +27629,7 @@
         "original_text": "ทำไมเค้าชาจแบตขึ้นช้าบางทีไม่ขึ้นเลยค่ะทีแรกแบตโทรศัพท์เค้า63ชาจไปเกือบ10นาทีก็เท่าเดิมแต่แบตเข้านะคะ😅",
         "sentiment_status": "🔴 เชิงลบ (Negative)",
         "sentiment_value": "NEG",
-        "ai_score": 0.9347944259643555,
+        "ai_score": 0.9939701557159424,
         "analysis_source": "with_context",
         "likes": 2
       },
@@ -27797,7 +27797,7 @@
         "original_text": "สนใจคะ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9984610080718994,
+        "ai_score": 0.9903462529182434,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -28208,7 +28208,7 @@
         "original_text": "คุ้มมากก",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.973162055015564,
+        "ai_score": 0.9059803485870361,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -28240,7 +28240,7 @@
         "original_text": "ใช้ดีค่า",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9704612493515015,
+        "ai_score": 0.9708042740821838,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -29354,7 +29354,7 @@
         "original_text": "แบตอึดมั้ยคะ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.8734215497970581,
+        "ai_score": 0.8784045577049255,
         "analysis_source": "with_context",
         "likes": 1
       },
@@ -29386,7 +29386,7 @@
         "original_text": "พกพาน่าจะง่ายสะดวกม่ก",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.6935557723045349,
+        "ai_score": 0.9190177321434021,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -29402,7 +29402,7 @@
         "original_text": "พกพาง่ายเลย",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.7444794774055481,
+        "ai_score": 0.843490719795227,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -29600,9 +29600,9 @@
       },
       {
         "original_text": "ดีอ่าา",
-        "sentiment_status": "⚪ กลางๆ (Neutral - Low Confidence)",
+        "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.5860462784767151,
+        "ai_score": 0.7232314348220825,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -29690,7 +29690,7 @@
         "original_text": "แบตอึดมั้ยคะ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.8734215497970581,
+        "ai_score": 0.8784045577049255,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -29859,9 +29859,9 @@
       },
       {
         "original_text": "6.ไฟฉายพกพา คือ สิ่งจำเป็น ในชีวิต เล็กๆแต่โคตรสว่าง อันละ 92 บาท ที่มีสี เขียว ดำ ส้ม ให้เลือกสี มีแม่เหล็กในตัวติดรถไว้ยามฉุกเฉินดีมาก ใช้สว่างเต็มที่ เปิดนานถึง 1.30 นาที เพียงพอต่อการรอการช่วยเหลือ",
-        "sentiment_status": "⚪ กลางๆ (Neutral - Low Confidence)",
+        "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.5532105565071106,
+        "ai_score": 0.8129987120628357,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -29941,7 +29941,7 @@
         "original_text": "ตัวนี้เลยพี่ แค่ไฟฉาย ที่อยากเสริม พี่ดูในรูป ให้มาครบเลย ในตัว ใช้ได้จริงทุกฟังก์ชัน",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9771494269371033,
+        "ai_score": 0.8372058868408203,
         "analysis_source": "with_context",
         "likes": 0
       },
@@ -30049,7 +30049,7 @@
         "original_text": "สนใจค่ะ",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.9814051985740662,
+        "ai_score": 0.9562817811965942,
         "analysis_source": "with_context",
         "likes": 6
       },
@@ -31051,9 +31051,9 @@
     ],
     "sentiment_summary": {
       "total_analyzed": 32,
-      "positive_percent": 31.25,
+      "positive_percent": 28.125,
       "negative_percent": 3.125,
-      "neutral_percent": 65.625
+      "neutral_percent": 68.75
     },
     "comments_analyzed": [
       {
@@ -31124,7 +31124,7 @@
         "original_text": "+1 GBA ครับพี่ 🔥🔥🔥",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.859856367111206,
+        "ai_score": 0.8246661424636841,
         "analysis_source": "with_context",
         "likes": 1
       },
@@ -31268,7 +31268,7 @@
         "original_text": "E-reader อีก 1 เสียง ดีย์มากก ระวังแค่เรื่องซื้อหนังสือเข้าคลัง ปีที่แล้วซื้อไป 400+ เล่ม 😅",
         "sentiment_status": "🟢 เชิงบวก (Positive)",
         "sentiment_value": "POS",
-        "ai_score": 0.9793437719345093,
+        "ai_score": 0.9849831461906433,
         "analysis_source": "with_context",
         "likes": 23
       },
@@ -31276,15 +31276,15 @@
         "original_text": "Boox go7 ครับที่ผมใช้ ไม่เร็วมาก แต่ก็ไม่ช้า",
         "sentiment_status": "⚪ กลางๆ (Neutral)",
         "sentiment_value": "NEU",
-        "ai_score": 0.8190102577209473,
+        "ai_score": 0.7843223810195923,
         "analysis_source": "with_context",
         "likes": 16
       },
       {
         "original_text": "5555555 คนพูดแบบนี้จนไม่กล้าซื้อมาอ่านเลยอะ",
-        "sentiment_status": "🟢 เชิงบวก (Positive)",
-        "sentiment_value": "POS",
-        "ai_score": 0.8714339733123779,
+        "sentiment_status": "⚪ กลางๆ (Neutral - Low Confidence)",
+        "sentiment_value": "NEU",
+        "ai_score": 0.5199856162071228,
         "analysis_source": "with_context",
         "likes": 7
       },
