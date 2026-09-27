@@ -1,7 +1,8 @@
 import json
+import config
 
-INPUT_FILE = "data/analyzed_videos.json"
-OUTPUT_FILE = "data/scored_videos.json" # ทำหน้าที่เป็น Lightweight Storage สำหรับ Day 2
+INPUT_FILE = config.ANALYZED_VIDEOS_FILE
+OUTPUT_FILE = config.SCORED_VIDEOS_FILE
 
 def calculate_scores():
     print(f"🧮 กำลังเริ่มคำนวณ Trust & ROI Score จากไฟล์: {INPUT_FILE}")

@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import json
+import config
 
 app = FastAPI(title="Influencer Trust Score API")
 
@@ -14,7 +15,7 @@ app.add_middleware(
 )
 
 # ดึงข้อมูลจาก Lightweight Storage ที่เราทำไว้ใน Day 2
-STORAGE_FILE = "data/scored_videos.json"
+STORAGE_FILE = config.SCORED_VIDEOS_FILE
 
 @app.get("/api/scores")
 def get_trust_scores():

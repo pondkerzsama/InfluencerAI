@@ -1,10 +1,11 @@
 import json
 import re
+import config
 
 # ไฟล์ตั้งต้น
-VALID_VIDEOS_FILE = "data/valid_videos.json" # ไฟล์ที่เพิ่งรันผ่านตะกี้
-COMMENT_FILE = "data/comment.json"           # ไฟล์คอมเมนต์ดิบ
-OUTPUT_FILE = "data/merged_ready.json"       # ไฟล์ผลลัพธ์ที่จะส่งให้ AI
+VALID_VIDEOS_FILE = config.VALID_VIDEOS_FILE     # ไฟล์จากการทำ json_check
+COMMENT_FILE = config.RAW_COMMENT_FILE           # ไฟล์คอมเมนต์ดิบ
+OUTPUT_FILE = config.MERGED_READY_FILE           # ไฟล์ผลลัพธ์ที่จะส่งให้ AI
 
 def merge_data():
     print("🔄 กำลังเริ่มประกอบร่างข้อมูล (Merge Data)...")

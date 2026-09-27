@@ -1,5 +1,6 @@
 import json
 import re
+import config
 from pythainlp import word_tokenize
 from pythainlp.corpus import thai_stopwords, thai_words
 from transformers import pipeline
@@ -90,9 +91,9 @@ def analyze_comments(caption, comments_list, confidence_threshold=0.6):
 
 
 def run_sentiment_pipeline():
-    INPUT_FILE = "data/merged_ready.json"
-    OUTPUT_FILE = "data/analyzed_videos.json"
-    PENDING_WORDS_FILE = "data/pending_words.json"
+    INPUT_FILE = config.MERGED_READY_FILE
+    OUTPUT_FILE = config.ANALYZED_VIDEOS_FILE
+    PENDING_WORDS_FILE = config.PENDING_WORDS_FILE
     
     print(f"\n🚀 เริ่มต้นรัน Sentiment Pipeline กับข้อมูล: {INPUT_FILE}")
     

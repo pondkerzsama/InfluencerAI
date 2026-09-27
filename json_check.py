@@ -1,10 +1,11 @@
 import json
-import re  # <- 1. เพิ่ม import re สำหรับใช้ Regular Expression
+import re  # import re สำหรับใช้ Regular Expression
+import config
 
-VIDEO_FILE = "dataset/data-set-with-comment.json"
-COMMENT_FILE = "data/comment.json"
-OUTPUT_FILE = "data/valid_videos.json"  
-MIN_COMMENTS_REQUIRED = 5               
+VIDEO_FILE = config.RAW_VIDEO_FILE
+COMMENT_FILE = config.RAW_COMMENT_FILE
+OUTPUT_FILE = config.VALID_VIDEOS_FILE
+MIN_COMMENTS_REQUIRED = 5            
 
 def check_data_quality():
     print("🔍 กำลังเริ่มตรวจสอบคุณภาพข้อมูล...\n")
