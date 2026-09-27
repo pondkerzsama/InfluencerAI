@@ -19,15 +19,13 @@ def extract_unknown_words(text):
 
 def analyze_comments(caption, comments_list, confidence_threshold=0.6):
     """
-    วิเคราะห์อารมณ์จากรายการคอมเมนต์ของ 1 คลิป 
-    - รับค่า caption ของคลิปมาเป็นบริบทเสริม
-    - มี Threshold กรองความมั่นใจ ถ้าต่ำกว่าเกณฑ์ให้เป็น Neutral
-    - คืนค่า: สรุปภาพรวมอารมณ์ (Aggregate), ผลวิเคราะห์รายคอมเมนต์, และคำศัพท์ใหม่
+    วิเคราะห์อารมณ์จากรายการคอมเมนต์ (แบบ Comment-first)
+    - วิเคราะห์คอมเมนต์เดี่ยวก่อน
+    - ถ้าระดับความมั่นใจต่ำกว่า threshold ค่อยดึง caption มาเป็นบริบทเสริม
     """
     analyzed_results = []
     pending_words = set()
     
-    # ตัวแปรสำหรับคำนวณค่าเฉลี่ย/สัดส่วน
     total_valid_comments = 0
     pos_count = 0
     neg_count = 0
@@ -38,15 +36,21 @@ def analyze_comments(caption, comments_list, confidence_threshold=0.6):
         if not comment_text.strip():
             continue
             
-        # 1. ประกอบร่าง Context เพื่อลดความกำกวมของ AI
-        contextual_text = f"บริบท: {caption} | คอมเมนต์: {comment_text}"
-        
-        # 2. วิเคราะห์อารมณ์ (จำกัดความยาวป้องกัน Error)
-        ai_result = sentiment_analyzer(contextual_text, truncation=True, max_length=512)[0]
-        label = ai_result['label'].lower()
+        # 1. วิเคราะห์รอบแรก: ใช้เฉพาะข้อความคอมเมนต์ <--- แก้ไขลอจิกใหม่
+        ai_result = sentiment_analyzer(comment_text, truncation=True, max_length=512)[0]
         score = ai_result['score']
+        analysis_source = "comment_only"
         
-        # 3. เช็ก Confidence Threshold ป้องกัน AI มั่ว
+        # 2. ถ้ารอบแรก AI ไม่มั่นใจ และมีแคปชัน ให้วิเคราะห์รอบสองโดยใส่บริบทเข้าไปช่วย
+        if score < confidence_threshold and caption.strip() != "":
+            contextual_text = f"บริบท: {caption} | คอมเมนต์: {comment_text}"
+            ai_result = sentiment_analyzer(contextual_text, truncation=True, max_length=512)[0]
+            score = ai_result['score']
+            analysis_source = "with_context"
+            
+        label = ai_result['label'].lower()
+        
+        # 3. ตัดสินผลลัพธ์อารมณ์สุดท้าย (ถ้าช่วยแล้วยังต่ำกว่าเกณฑ์ ก็ให้เป็นกลาง)
         if score < confidence_threshold:
             status = "⚪ กลางๆ (Neutral - Low Confidence)"
             sentiment_value = "NEU"
@@ -66,7 +70,7 @@ def analyze_comments(caption, comments_list, confidence_threshold=0.6):
         elif sentiment_value == "NEG": neg_count += 1
         else: neu_count += 1
             
-        # 4. สกัดคำศัพท์ใหม่
+        # 4. สกัดคำศัพท์ใหม่ (ใช้แค่ comment_text เพียวๆ เสมอ)
         unknowns = extract_unknown_words(comment_text)
         pending_words.update(unknowns)
         
@@ -76,10 +80,11 @@ def analyze_comments(caption, comments_list, confidence_threshold=0.6):
             "sentiment_status": status,
             "sentiment_value": sentiment_value,
             "ai_score": score,
+            "analysis_source": analysis_source, # <--- เพิ่มฟิลด์ที่มาของการวิเคราะห์
             "likes": comment.get("likes", 0) 
         })
         
-    # 5. สรุปผลภาพรวม (Aggregate) สำหรับส่งให้ระบบคิด Trust Score
+    # 5. สรุปผลภาพรวม
     summary = {
         "total_analyzed": total_valid_comments,
         "positive_percent": (pos_count / total_valid_comments * 100) if total_valid_comments > 0 else 0,
@@ -106,7 +111,6 @@ def run_sentiment_pipeline():
 
     all_pending_words = set()
     
-    # โหลด pending words เก่า (ถ้ามี) จะได้ไม่เก็บคำซ้ำ
     try:
         with open(PENDING_WORDS_FILE, 'r', encoding='utf-8') as f:
             old_words = json.load(f)
@@ -114,24 +118,19 @@ def run_sentiment_pipeline():
     except FileNotFoundError:
         pass
 
-    # วนลูปวิเคราะห์ทีละคลิป
     for i, video in enumerate(videos):
         caption = video.get("caption", "")
         comments = video.get("comments", [])
         
         print(f"กำลังวิเคราะห์คลิปที่ {i+1}/{len(videos)}: {video.get('author_name')} ({len(comments)} คอมเมนต์)")
         
-        # ส่งเข้าฟังก์ชันวิเคราะห์อารมณ์
         summary, analyzed_comments, new_words = analyze_comments(caption, comments)
         
-        # นำผลลัพธ์เสียบกลับเข้าไปในข้อมูลวิดีโอ
         video["sentiment_summary"] = summary
         video["comments_analyzed"] = analyzed_comments
         
-        # อัปเดตคำศัพท์ใหม่
         all_pending_words.update(new_words)
 
-    # บันทึกไฟล์ผลลัพธ์
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         json.dump(videos, f, ensure_ascii=False, indent=2)
         
@@ -141,7 +140,7 @@ def run_sentiment_pipeline():
     print("\n✅ รัน Sentiment Pipeline เสร็จสมบูรณ์!")
     print(f"💾 ข้อมูลพร้อมใช้ถูกบันทึกไว้ที่: {OUTPUT_FILE}")
     print(f"📚 พบคำศัพท์ใหม่ที่ AI ไม่รู้จักรวม: {len(all_pending_words)} คำ (บันทึกใน {PENDING_WORDS_FILE})")
-    print("🎉 ยินดีด้วยครับ ภารกิจ Day 1 เสร็จสิ้นตามเป้าหมายแล้ว!")
+    print("🎉 ยินดีด้วยครับ แก้ไขลอจิก Comment-first เสร็จสมบูรณ์แล้ว!")
 
 if __name__ == "__main__":
     run_sentiment_pipeline()

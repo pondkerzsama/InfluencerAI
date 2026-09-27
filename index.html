@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Influencer Trust & ROI Dashboard</title>
+    <title>GadgetROI — ประเมินความคุ้มค่า Influencer</title>
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; padding: 20px; color: #333; }
-        h1 { text-align: center; margin-bottom: 20px; }
+        h1 { text-align: center; margin-bottom: 5px; }
+        p.subtitle { text-align: center; color: #7f8c8d; margin-bottom: 25px; font-size: 14px; }
         .summary { display: flex; justify-content: center; gap: 20px; margin-bottom: 30px; flex-wrap: wrap; }
         .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; min-width: 150px;}
         .card h3 { margin-top: 0; font-size: 16px; color: #666; }
@@ -21,11 +22,12 @@
         .grade-D { color: #c0392b; font-weight: bold; }
         a.btn { background-color: #3498db; color: white; padding: 6px 12px; text-decoration: none; border-radius: 4px; font-size: 14px; }
         a.btn:hover { background-color: #2980b9; }
-        .badge-ad { background-color: #e74c3c; color: white; font-size: 10px; padding: 2px 6px; border-radius: 10px; margin-left: 5px; }
+        .badge-info { background-color: #95a5a6; color: white; font-size: 11px; padding: 3px 6px; border-radius: 10px; margin-left: 5px; }
     </style>
 </head>
 <body>
-    <h1>📊 Influencer Trust & ROI Dashboard</h1>
+    <h1>📊 GadgetROI Dashboard</h1>
+    <p class="subtitle">⚠️ หมายเหตุ: ROI Score ในที่นี้ประเมินจาก Engagement และ Sentiment เป็นหลัก (ไม่ใช่ยอดขายจริง)</p>
 
     <div class="summary" id="summary-cards">
         <!-- ข้อมูลสรุปจะถูกแทรกตรงนี้ -->
@@ -35,12 +37,12 @@
         <thead>
             <tr>
                 <th>Influencer</th>
-                <th>ยอดวิว</th>
-                <th>Engagement Rate</th>
+                <th>ฐานคนดูรวม (ยอดวิว)</th>
+                <th>Avg. Engagement Rate</th>
                 <th>คะแนน Sentiment</th>
-                <th>Trust Score</th>
+                <th>ROI Score</th>
                 <th>เกรดประเมิน</th>
-                <th>ลิงก์คลิป</th>
+                <th>ตรวจสอบ</th>
             </tr>
         </thead>
         <tbody id="table-body">
@@ -51,40 +53,36 @@
     <script>
         async function fetchData() {
             try {
-                // ดึงข้อมูลจาก API ที่เราเพิ่งสร้าง
                 const response = await fetch('http://127.0.0.1:8000/api/scores');
                 const result = await response.json();
 
                 if(result.status === "success") {
-                    // วาดการ์ดสรุปผล
-                    const summary = result.summary;
-                    const dist = summary.grade_distribution;
+                    const dist = result.summary.grade_distribution;
                     document.getElementById('summary-cards').innerHTML = `
-                        <div class="card"><h3>วิเคราะห์ทั้งหมด</h3><h2>${summary.total_videos_analyzed} คลิป</h2></div>
-                        <div class="card"><h3 class="grade-A">เกรด A (แนะนำจ้าง)</h3><h2 class="grade-A">${dist.A}</h2></div>
-                        <div class="card"><h3 class="grade-B">เกรด B (พอใช้ได้)</h3><h2 class="grade-B">${dist.B}</h2></div>
-                        <div class="card"><h3 class="grade-C">เกรด C (มีความเสี่ยง)</h3><h2 class="grade-C">${dist.C}</h2></div>
-                        <div class="card"><h3 class="grade-D">เกรด D (ไม่แนะนำ)</h3><h2 class="grade-D">${dist.D}</h2></div>
+                        <div class="card"><h3>วิเคราะห์ Influencer รวม</h3><h2>${result.data.length} คน</h2></div>
+                        <div class="card"><h3 class="grade-A">เกรด A (แนะนำจ้าง)</h3><h2 class="grade-A">${dist.A || 0}</h2></div>
+                        <div class="card"><h3 class="grade-B">เกรด B (พอใช้ได้)</h3><h2 class="grade-B">${dist.B || 0}</h2></div>
+                        <div class="card"><h3 class="grade-C">เกรด C (มีความเสี่ยง)</h3><h2 class="grade-C">${dist.C || 0}</h2></div>
+                        <div class="card"><h3 class="grade-D">เกรด D (ไม่แนะนำ)</h3><h2 class="grade-D">${dist.D || 0}</h2></div>
                     `;
 
-                    // วาดตารางข้อมูล Influencer
                     const tbody = document.getElementById('table-body');
-                    // เรียงคะแนนจากมากไปน้อย
-                    const sortedData = result.data.sort((a, b) => b.evaluation.trust_score - a.evaluation.trust_score);
+                    // เรียงคะแนน ROI จากมากไปน้อย
+                    const sortedData = result.data.sort((a, b) => b.evaluation.roi_score - a.evaluation.roi_score);
                     
                     sortedData.forEach(v => {
                         const eval = v.evaluation;
                         const gradeClass = eval.grade.charAt(0); 
-                        const adBadge = eval.isAd ? '<span class="badge-ad">AD</span>' : '';
                         
                         const row = `<tr>
-                            <td><b>${v.author_name}</b> ${adBadge}<br><span style="color:#7f8c8d; font-size:12px;">ผู้ติดตาม: ${v.followers.toLocaleString()}</span></td>
-                            <td>${v.playCount.toLocaleString()}</td>
-                            <td>${v.metrics.engagement_rate_percent}%<br><span style="color:#7f8c8d; font-size:12px;">(ได้ ${eval.score_breakdown.engagement_40}/40)</span></td>
-                            <td>${eval.score_breakdown.sentiment_40} / 40</td>
-                            <td style="font-size: 18px; font-weight: bold;">${eval.trust_score}</td>
+                            <td><b>${v.author_name}</b> <span class="badge-info">วิเคราะห์ ${v.analyzed_videos_count} คลิป</span><br>
+                                <span style="color:#7f8c8d; font-size:12px;">ผู้ติดตาม: ${v.followers.toLocaleString()} | โฆษณา: ${v.ad_ratio}</span></td>
+                            <td>${v.total_views.toLocaleString()}</td>
+                            <td>${v.metrics.avg_engagement_rate_percent}%<br><span style="color:#7f8c8d; font-size:12px;">(ได้ ${eval.score_breakdown.engagement_40}/40)</span></td>
+                            <td>${eval.score_breakdown.sentiment_40} / 40<br><span style="color:#7f8c8d; font-size:12px;">(เชิงบวกเฉลี่ย ${v.metrics.avg_positive_sentiment}%)</span></td>
+                            <td style="font-size: 18px; font-weight: bold;">${eval.roi_score}</td>
                             <td class="grade-${gradeClass}">${eval.grade}</td>
-                            <td><a href="${v.webVideoUrl}" target="_blank" class="btn">ดูคลิป</a></td>
+                            <td><a href="${v.sample_video_url}" target="_blank" class="btn">คลิปตัวอย่าง</a></td>
                         </tr>`;
                         tbody.innerHTML += row;
                     });

@@ -1,5 +1,6 @@
 import json
 import re
+import string
 from pythainlp import word_tokenize
 from pythainlp.util import normalize
 
@@ -11,11 +12,10 @@ def clean_thai_text(text):
     text = normalize(text)
 
     # 2. ลดตัวอักษรที่เบิ้ลเกินความจำเป็น (เช่น โลกกกก -> โลก)
-    # ลอจิก: ถ้าเจอตัวอักษรซ้ำกันตั้งแต่ 3 ตัวขึ้นไป ให้ย่อเหลือตัวเดียว
     text = re.sub(r'(.)\1{2,}', r'\1', text)
 
-    # 3. ลบอีโมจิและเครื่องหมายแปลกๆ (เก็บไว้เฉพาะ ก-๙, a-z, A-Z, 0-9 และช่องว่าง)
-    text = re.sub(r'[^\w\sก-๙]', ' ', text)
+    # 3. ลบเฉพาะเครื่องหมายวรรคตอนทั่วไป (เก็บอีโมจิและตัวอักษรไว้ครบ) <--- แก้ไขจุดนี้
+    text = re.sub(f'[{re.escape(string.punctuation)}]', ' ', text)
 
     # 4. ลบช่องว่างที่ซ้ำซ้อนให้เหลือเคาะเดียว
     text = re.sub(r'\s+', ' ', text).strip()
