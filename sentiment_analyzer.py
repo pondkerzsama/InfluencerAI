@@ -7,25 +7,17 @@ from transformers import pipeline
 from text_cleaner import clean_thai_text
 
 print("⏳ กำลังโหลด AI Model (SandboxBhh/sentiment-thai-text-model)...")
-sentiment_analyzer = pipeline("text-classification", model="SandboxBhh/sentiment-thai-text-model")
+# แก้ไข: เพิ่ม top_k=None เพื่อให้โมเดลคืนค่า probability (ความมั่นใจ) ออกมาครบทุกคลาส
+sentiment_analyzer = pipeline("text-classification", model="SandboxBhh/sentiment-thai-text-model", top_k=None)
 stop_words = frozenset(thai_stopwords())
 thai_dict = frozenset(thai_words())
 
 def extract_unknown_words(text):
-    """ฟังก์ชันสกัดคำศัพท์ใหม่ที่ AI อาจไม่รู้จัก เพื่อเก็บลง pending words"""
     cleaned = clean_thai_text(text)
     tokens = word_tokenize(cleaned, engine="newmm")
     return [w for w in tokens if w not in stop_words and w.strip() != "" and w not in thai_dict and not re.match(r'^[a-zA-Z0-9_]+$', w)]
 
 def analyze_comments(caption, comments_list, confidence_threshold=0.6):
-    """
-    วิเคราะห์อารมณ์จากรายการคอมเมนต์ (แบบ Comment-first)
-    - วิเคราะห์คอมเมนต์เดี่ยวก่อน
-    - ถ้าระดับความมั่นใจต่ำกว่า threshold ค่อยดึง caption มาเป็นบริบทเสริม "ลองดู"
-    - เทียบ confidence ของทั้ง 2 รอบ แล้วเลือกรอบที่ AI มั่นใจกว่าจริง
-      (ไม่ override ทิ้งตายตัว เพราะพบจากข้อมูลจริงว่า with_context บางครั้ง
-      ทำให้คอมเมนต์สั้นๆ ที่ควรเป็นบวกชัดเจน เช่น "เสียงดีค่า" กลายเป็นลบ/กลางไปเลย)
-    """
     analyzed_results = []
     pending_words = set()
 
@@ -39,30 +31,40 @@ def analyze_comments(caption, comments_list, confidence_threshold=0.6):
         if not comment_text.strip():
             continue
 
-        # 1. วิเคราะห์รอบแรก: ใช้เฉพาะข้อความคอมเมนต์
-        comment_only_result = sentiment_analyzer(comment_text, truncation=True, max_length=512)[0]
-        best_result = comment_only_result
-        best_score = comment_only_result['score']
+        # 1. วิเคราะห์รอบแรก: ผลลัพธ์จะเป็น List ของทุกคลาส เช่น [{'label': 'pos', 'score': 0.8}, ...]
+        raw_comment_results = sentiment_analyzer(comment_text, truncation=True, max_length=512)[0]
+        # หาคลาสที่คะแนนสูงสุดเป็นตัวตั้งต้น
+        best_class = max(raw_comment_results, key=lambda x: x['score'])
+        best_score = best_class['score']
+        active_results = raw_comment_results
         analysis_source = "comment_only"
 
         # 2. ถ้ารอบแรก AI ไม่มั่นใจ และมีแคปชัน ให้ลองวิเคราะห์รอบสองโดยเสริมบริบทเข้าไปดู
         if best_score < confidence_threshold and caption.strip() != "":
             contextual_text = f"{caption} {comment_text}"
-            context_result = sentiment_analyzer(contextual_text, truncation=True, max_length=512)[0]
+            raw_context_results = sentiment_analyzer(contextual_text, truncation=True, max_length=512)[0]
+            best_class_context = max(raw_context_results, key=lambda x: x['score'])
 
-            # 3. เทียบ confidence ทั้ง 2 รอบ แล้วเลือกรอบที่มั่นใจกว่าจริง
-            #    ไม่ใช่ยึดรอบ context เป็นคำตอบสุดท้ายเสมอไป
-            if context_result['score'] > best_score:
-                best_result = context_result
-                best_score = context_result['score']
+            # 3. เทียบ confidence ทั้ง 2 รอบ เลือกรอบที่มั่นใจกว่าจริง
+            if best_class_context['score'] > best_score:
+                best_class = best_class_context
+                best_score = best_class_context['score']
+                active_results = raw_context_results
                 analysis_source = "with_context"
-            # ถ้า context ไม่ได้ช่วยให้มั่นใจขึ้นจริง ก็ยังคงใช้ comment_only ต่อไป
-            # (analysis_source ยังเป็น "comment_only" เหมือนเดิม)
 
-        label = best_result['label'].lower()
+        label = best_class['label'].lower()
         score = best_score
+        
+        # --- เพิ่มเติม: สกัดค่า P(POS) และ P(NEG) ตามสเปกใหม่ ---
+        prob_pos = 0.0
+        prob_neg = 0.0
+        for item in active_results:
+            lbl = item['label'].lower()
+            if 'pos' in lbl: prob_pos = item['score']
+            elif 'neg' in lbl: prob_neg = item['score']
+        # ---------------------------------------------------
 
-        # 4. ตัดสินผลลัพธ์อารมณ์สุดท้าย (ถ้าลองทุกทางแล้วยังต่ำกว่าเกณฑ์ ก็ให้เป็นกลาง)
+        # 4. ตัดสินผลลัพธ์อารมณ์สุดท้าย (สำหรับจัดหมวดหมู่โชว์สรุป)
         if score < confidence_threshold:
             status = "⚪ กลางๆ (Neutral - Low Confidence)"
             sentiment_value = "NEU"
@@ -76,27 +78,26 @@ def analyze_comments(caption, comments_list, confidence_threshold=0.6):
             status = "⚪ กลางๆ (Neutral)"
             sentiment_value = "NEU"
 
-        # นับสถิติภาพรวม
         total_valid_comments += 1
         if sentiment_value == "POS": pos_count += 1
         elif sentiment_value == "NEG": neg_count += 1
         else: neu_count += 1
 
-        # 5. สกัดคำศัพท์ใหม่ (ใช้แค่ comment_text เพียวๆ เสมอ)
         unknowns = extract_unknown_words(comment_text)
         pending_words.update(unknowns)
 
-        # เก็บผลลัพธ์ของแต่ละคอมเมนต์
+        # เก็บผลลัพธ์ของแต่ละคอมเมนต์ พร้อมค่า Probabilities
         analyzed_results.append({
             "original_text": comment_text,
             "sentiment_status": status,
             "sentiment_value": sentiment_value,
             "ai_score": score,
+            "prob_pos": prob_pos,  # ฟิลด์ใหม่
+            "prob_neg": prob_neg,  # ฟิลด์ใหม่
             "analysis_source": analysis_source,
             "likes": comment.get("likes", 0)
         })
 
-    # 6. สรุปผลภาพรวม
     summary = {
         "total_analyzed": total_valid_comments,
         "positive_percent": (pos_count / total_valid_comments * 100) if total_valid_comments > 0 else 0,
@@ -151,7 +152,6 @@ def run_sentiment_pipeline():
 
     print("\n✅ รัน Sentiment Pipeline เสร็จสมบูรณ์!")
     print(f"💾 ข้อมูลพร้อมใช้ถูกบันทึกไว้ที่: {OUTPUT_FILE}")
-    print(f"📚 พบคำศัพท์ใหม่ที่ AI ไม่รู้จักรวม: {len(all_pending_words)} คำ (บันทึกใน {PENDING_WORDS_FILE})")
 
 if __name__ == "__main__":
     run_sentiment_pipeline()

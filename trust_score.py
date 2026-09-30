@@ -4,8 +4,16 @@ import config
 INPUT_FILE = config.ANALYZED_VIDEOS_FILE
 OUTPUT_FILE = config.SCORED_VIDEOS_FILE
 
+def calculate_percentile(value, data_list):
+    """ฟังก์ชันคำนวณตำแหน่ง Percentile (0.0 - 1.0) ของค่า ER เมื่อเทียบกับคลิปทั้งหมด"""
+    if not data_list:
+        return 0.0
+    less_than = sum(1 for x in data_list if x < value)
+    equal_to = sum(1 for x in data_list if x == value)
+    return (less_than + (0.5 * equal_to)) / len(data_list)
+
 def calculate_scores():
-    print(f"🧮 กำลังเริ่มคำนวณ ROI Score (ระดับ Influencer) จากไฟล์: {INPUT_FILE}")
+    print(f"🧮 กำลังเริ่มคำนวณ ROI Score แบบใหม่ (Percentile & Prob-Sentiment) จากไฟล์: {INPUT_FILE}")
     
     try:
         with open(INPUT_FILE, 'r', encoding='utf-8') as f:
@@ -14,73 +22,71 @@ def calculate_scores():
         print(f"❌ หาไฟล์ {INPUT_FILE} ไม่พบ กรุณารัน sentiment_analyzer.py ก่อน")
         return
 
-    # 1. จัดกลุ่มข้อมูลวิดีโอตามชื่อ Influencer
-    influencers_data = {}
+    # 1. คำนวณ ER ต่อคลิป และเก็บค่า ER ทั้งหมดเพื่อใช้สร้าง Curve (Percentile)
+    all_ers = []
+    for v in videos:
+        views = v.get("playCount", 0)
+        if views > 0:
+            er = ((v.get("diggCount", 0) + v.get("shareCount", 0) + v.get("collectCount", 0) + v.get("commentCount", 0)) / views) * 100
+        else:
+            er = 0
+        v["_temp_er"] = er
+        all_ers.append(er)
 
+    # 2. จัดกลุ่มและคำนวณคะแนนระดับคลิปก่อนยุบรวม
+    influencers_data = {}
     for v in videos:
         author = v.get("author_name", "Unknown")
+        er_percent = v["_temp_er"]
         
-        # ถ้าเพิ่งเจอช่องนี้ครั้งแรก ให้สร้างโปรไฟล์ตั้งต้น
+        # --- ก. แปลง ER ของคลิปนี้เป็น Percentile Rank และคิดเป็นคะแนนเต็ม 40 ---
+        percentile_rank = calculate_percentile(er_percent, all_ers)
+        engagement_score_video = percentile_rank * 40
+        
         if author not in influencers_data:
             influencers_data[author] = {
                 "author_name": author,
                 "followers": v.get("followers", 0),
                 "following": v.get("following", 0),
                 "total_views": 0,
-                "total_likes": 0,
-                "total_shares": 0,
-                "total_saves": 0,
-                "total_comments": 0,
-                "video_count": 0,
-                "sum_pos_pct": 0,
-                "sum_neg_pct": 0,
                 "ad_count": 0, 
-                "video_urls": []
+                "video_urls": [],
+                "video_er_scores": [], # เก็บคะแนน ER ของแต่ละคลิป
+                "comment_Si_list": []  # เก็บค่า S_i ของทุกคอมเมนต์
             }
             
-        # สะสมยอด Engagement ทุกคลิปของช่องนี้
         influencers_data[author]["total_views"] += v.get("playCount", 0)
-        influencers_data[author]["total_likes"] += v.get("diggCount", 0)
-        influencers_data[author]["total_shares"] += v.get("shareCount", 0)
-        influencers_data[author]["total_saves"] += v.get("collectCount", 0)
-        influencers_data[author]["total_comments"] += v.get("commentCount", 0)
-        
-        # สะสม Sentiment 
-        sentiment = v.get("sentiment_summary", {})
-        influencers_data[author]["sum_pos_pct"] += sentiment.get("positive_percent", 0)
-        influencers_data[author]["sum_neg_pct"] += sentiment.get("negative_percent", 0)
-        
-        if v.get("isAd", False):
-            influencers_data[author]["ad_count"] += 1
-            
-        influencers_data[author]["video_count"] += 1
+        if v.get("isAd", False): influencers_data[author]["ad_count"] += 1
         influencers_data[author]["video_urls"].append(v.get("webVideoUrl", ""))
+        influencers_data[author]["video_er_scores"].append(engagement_score_video)
+        
+        # --- ข. ประมวลผลคะแนน Sentiment แต่ละคอมเมนต์ด้วยสมการ Si = prob_pos - prob_neg ---
+        for comment in v.get("comments_analyzed", []):
+            prob_pos = comment.get("prob_pos", 0)
+            prob_neg = comment.get("prob_neg", 0)
+            Si = prob_pos - prob_neg
+            influencers_data[author]["comment_Si_list"].append(Si)
 
     scored_data = []
 
-    # 2. คำนวณคะแนนรวมเป็นรายบุคคล
+    # 3. คำนวณคะแนนรวมระดับ Influencer
     for author, data in influencers_data.items():
-        views = data["total_views"]
-        v_count = data["video_count"]
+        v_count = len(data["video_er_scores"])
         
-        # ก. หาค่าเฉลี่ย Engagement Rate รวมทุกคลิป
-        if views > 0:
-            er_percent = ((data["total_likes"] + data["total_shares"] + data["total_saves"] + data["total_comments"]) / views) * 100
+        # ก. เฉลี่ยคะแนน Engagement ของทุกคลิป
+        avg_er_score = sum(data["video_er_scores"]) / v_count if v_count > 0 else 0
+        
+        # ข. หาค่าเฉลี่ย Sentiment รวม (S_bar) แล้วเข้าสมการ
+        if data["comment_Si_list"]:
+            S_bar = sum(data["comment_Si_list"]) / len(data["comment_Si_list"])
         else:
-            er_percent = 0
-            
-        # ข. หาค่าเฉลี่ย Sentiment รวมทุกคลิป
-        avg_pos = data["sum_pos_pct"] / v_count if v_count > 0 else 0
-        avg_neg = data["sum_neg_pct"] / v_count if v_count > 0 else 0
+            S_bar = 0
+        sentiment_score = ((S_bar + 1) / 2) * 40
         
-        # ค. คำนวณ Follower Ratio
+        # ค. คำนวณ Follower Ratio (คะแนนคุณภาพช่อง คงเดิม)
         fans = data["followers"]
         following = data["following"]
         follow_ratio = fans / following if following > 0 else fans
-        
-        # --- สร้างสูตรคำนวณคะแนน (เต็ม 100) ---
-        er_score = min((er_percent / 5.0) * 40, 40)
-        sentiment_score = max(0, min(((avg_pos - (avg_neg * 0.5)) / 100) * 40, 40))
         
         if follow_ratio >= 10:   
             ratio_score = 20
@@ -89,31 +95,30 @@ def calculate_scores():
         else:                    
             ratio_score = 5 
             
-        # รวมเป็น ROI Score (เปลี่ยนชื่อตามมติในไฟล์เอกสาร)
-        total_score = round(er_score + sentiment_score + ratio_score, 2)
+        # รวมเป็น ROI Score
+        total_score = round(avg_er_score + sentiment_score + ratio_score, 2)
         
         if total_score >= 80: grade = "A (แนะนำจ้าง)"
         elif total_score >= 60: grade = "B (พอใช้ได้)"
         elif total_score >= 40: grade = "C (มีความเสี่ยง)"
         else: grade = "D (ไม่แนะนำ)"
         
-        # จัดรูปแบบ JSON ใหม่ให้ Dashboard
         scored_data.append({
             "author_name": author,
             "followers": fans,
             "analyzed_videos_count": v_count,
-            "total_views": views,
-            "ad_ratio": f"{data['ad_count']}/{v_count}", # สัดส่วนคลิปที่เป็นโฆษณา
+            "total_views": data["total_views"],
+            "ad_ratio": f"{data['ad_count']}/{v_count}",
             "metrics": {
-                "avg_engagement_rate_percent": round(er_percent, 2),
+                "avg_percentile_engagement_score": round(avg_er_score, 2),
                 "follower_ratio": round(follow_ratio, 2),
-                "avg_positive_sentiment": round(avg_pos, 2)
+                "sentiment_S_bar": round(S_bar, 4)
             },
             "evaluation": {
                 "roi_score": total_score,
                 "grade": grade,
                 "score_breakdown": {
-                    "engagement_40": round(er_score, 2),
+                    "engagement_40": round(avg_er_score, 2),
                     "sentiment_40": round(sentiment_score, 2),
                     "channel_quality_20": round(ratio_score, 2)
                 }
@@ -121,7 +126,6 @@ def calculate_scores():
             "sample_video_url": data["video_urls"][0] if data["video_urls"] else "#"
         })
         
-    # บันทึกไฟล์ผลลัพธ์
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         json.dump(scored_data, f, ensure_ascii=False, indent=2)
         

@@ -6,16 +6,16 @@
     "total_views": 136000,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 0.5,
+      "avg_percentile_engagement_score": 9.43,
       "follower_ratio": 1.23,
-      "avg_positive_sentiment": 74.0
+      "sentiment_S_bar": 0.6231
     },
     "evaluation": {
-      "roi_score": 38.23,
-      "grade": "D (ไม่แนะนำ)",
+      "roi_score": 46.9,
+      "grade": "C (มีความเสี่ยง)",
       "score_breakdown": {
-        "engagement_40": 4.03,
-        "sentiment_40": 29.2,
+        "engagement_40": 9.43,
+        "sentiment_40": 32.46,
         "channel_quality_20": 5
       }
     },
@@ -28,16 +28,16 @@
     "total_views": 142900,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 0.5,
+      "avg_percentile_engagement_score": 8.68,
       "follower_ratio": 0.51,
-      "avg_positive_sentiment": 20.0
+      "sentiment_S_bar": 0.1518
     },
     "evaluation": {
-      "roi_score": 17.03,
+      "roi_score": 36.72,
       "grade": "D (ไม่แนะนำ)",
       "score_breakdown": {
-        "engagement_40": 4.03,
-        "sentiment_40": 8.0,
+        "engagement_40": 8.68,
+        "sentiment_40": 23.04,
         "channel_quality_20": 5
       }
     },
@@ -50,16 +50,16 @@
     "total_views": 2500000,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 1.76,
+      "avg_percentile_engagement_score": 33.58,
       "follower_ratio": 242.86,
-      "avg_positive_sentiment": 11.63
+      "sentiment_S_bar": 0.067
     },
     "evaluation": {
-      "roi_score": 37.16,
-      "grade": "D (ไม่แนะนำ)",
+      "roi_score": 74.93,
+      "grade": "B (พอใช้ได้)",
       "score_breakdown": {
-        "engagement_40": 14.06,
-        "sentiment_40": 3.1,
+        "engagement_40": 33.58,
+        "sentiment_40": 21.34,
         "channel_quality_20": 20
       }
     },
@@ -72,16 +72,16 @@
     "total_views": 2400000,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 0.54,
+      "avg_percentile_engagement_score": 10.19,
       "follower_ratio": 7.01,
-      "avg_positive_sentiment": 16.26
+      "sentiment_S_bar": -0.0782
     },
     "evaluation": {
-      "roi_score": 15.63,
+      "roi_score": 38.63,
       "grade": "D (ไม่แนะนำ)",
       "score_breakdown": {
-        "engagement_40": 4.33,
-        "sentiment_40": 1.3,
+        "engagement_40": 10.19,
+        "sentiment_40": 18.44,
         "channel_quality_20": 10
       }
     },
@@ -94,16 +94,16 @@
     "total_views": 76500,
     "ad_ratio": "0/1",
     "metrics": {
-      "avg_engagement_rate_percent": 0.39,
+      "avg_percentile_engagement_score": 4.15,
       "follower_ratio": 19.77,
-      "avg_positive_sentiment": 4.35
+      "sentiment_S_bar": 0.0573
     },
     "evaluation": {
-      "roi_score": 24.44,
-      "grade": "D (ไม่แนะนำ)",
+      "roi_score": 45.3,
+      "grade": "C (มีความเสี่ยง)",
       "score_breakdown": {
-        "engagement_40": 3.14,
-        "sentiment_40": 1.3,
+        "engagement_40": 4.15,
+        "sentiment_40": 21.15,
         "channel_quality_20": 20
       }
     },
@@ -116,16 +116,16 @@
     "total_views": 1200000,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 1.62,
+      "avg_percentile_engagement_score": 31.32,
       "follower_ratio": 114.44,
-      "avg_positive_sentiment": 13.64
+      "sentiment_S_bar": -0.0375
     },
     "evaluation": {
-      "roi_score": 34.81,
-      "grade": "D (ไม่แนะนำ)",
+      "roi_score": 70.57,
+      "grade": "B (พอใช้ได้)",
       "score_breakdown": {
-        "engagement_40": 13.0,
-        "sentiment_40": 1.82,
+        "engagement_40": 31.32,
+        "sentiment_40": 19.25,
         "channel_quality_20": 20
       }
     },
@@ -138,16 +138,16 @@
     "total_views": 16500,
     "ad_ratio": "0/1",
     "metrics": {
-      "avg_engagement_rate_percent": 0.76,
+      "avg_percentile_engagement_score": 19.25,
       "follower_ratio": 966.67,
-      "avg_positive_sentiment": 10.0
+      "sentiment_S_bar": 0.0225
     },
     "evaluation": {
-      "roi_score": 28.06,
-      "grade": "D (ไม่แนะนำ)",
+      "roi_score": 59.69,
+      "grade": "C (มีความเสี่ยง)",
       "score_breakdown": {
-        "engagement_40": 6.06,
-        "sentiment_40": 2.0,
+        "engagement_40": 19.25,
+        "sentiment_40": 20.45,
         "channel_quality_20": 20
       }
     },
@@ -160,16 +160,16 @@
     "total_views": 6000000,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 0.64,
+      "avg_percentile_engagement_score": 14.72,
       "follower_ratio": 63033.33,
-      "avg_positive_sentiment": 19.61
+      "sentiment_S_bar": 0.1179
     },
     "evaluation": {
-      "roi_score": 31.0,
-      "grade": "D (ไม่แนะนำ)",
+      "roi_score": 57.08,
+      "grade": "C (มีความเสี่ยง)",
       "score_breakdown": {
-        "engagement_40": 5.12,
-        "sentiment_40": 5.88,
+        "engagement_40": 14.72,
+        "sentiment_40": 22.36,
         "channel_quality_20": 20
       }
     },
@@ -182,16 +182,16 @@
     "total_views": 446800,
     "ad_ratio": "0/1",
     "metrics": {
-      "avg_engagement_rate_percent": 1.45,
+      "avg_percentile_engagement_score": 29.81,
       "follower_ratio": 3782.5,
-      "avg_positive_sentiment": 16.07
+      "sentiment_S_bar": 0.0217
     },
     "evaluation": {
-      "roi_score": 35.15,
-      "grade": "D (ไม่แนะนำ)",
+      "roi_score": 70.25,
+      "grade": "B (พอใช้ได้)",
       "score_breakdown": {
-        "engagement_40": 11.58,
-        "sentiment_40": 3.57,
+        "engagement_40": 29.81,
+        "sentiment_40": 20.43,
         "channel_quality_20": 20
       }
     },
@@ -204,16 +204,16 @@
     "total_views": 1500000,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 0.4,
+      "avg_percentile_engagement_score": 4.91,
       "follower_ratio": 69.98,
-      "avg_positive_sentiment": 33.33
+      "sentiment_S_bar": 0.1386
     },
     "evaluation": {
-      "roi_score": 32.09,
-      "grade": "D (ไม่แนะนำ)",
+      "roi_score": 47.68,
+      "grade": "C (มีความเสี่ยง)",
       "score_breakdown": {
-        "engagement_40": 3.2,
-        "sentiment_40": 8.89,
+        "engagement_40": 4.91,
+        "sentiment_40": 22.77,
         "channel_quality_20": 20
       }
     },
@@ -226,16 +226,16 @@
     "total_views": 11400,
     "ad_ratio": "0/1",
     "metrics": {
-      "avg_engagement_rate_percent": 1.32,
+      "avg_percentile_engagement_score": 29.06,
       "follower_ratio": 0.4,
-      "avg_positive_sentiment": 9.09
+      "sentiment_S_bar": -0.2647
     },
     "evaluation": {
-      "roi_score": 15.53,
-      "grade": "D (ไม่แนะนำ)",
+      "roi_score": 48.76,
+      "grade": "C (มีความเสี่ยง)",
       "score_breakdown": {
-        "engagement_40": 10.53,
-        "sentiment_40": 0,
+        "engagement_40": 29.06,
+        "sentiment_40": 14.71,
         "channel_quality_20": 5
       }
     },
@@ -248,16 +248,16 @@
     "total_views": 91900,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 0.58,
+      "avg_percentile_engagement_score": 11.7,
       "follower_ratio": 21.09,
-      "avg_positive_sentiment": 16.67
+      "sentiment_S_bar": 0.0141
     },
     "evaluation": {
-      "roi_score": 26.34,
-      "grade": "D (ไม่แนะนำ)",
+      "roi_score": 51.98,
+      "grade": "C (มีความเสี่ยง)",
       "score_breakdown": {
-        "engagement_40": 4.67,
-        "sentiment_40": 1.67,
+        "engagement_40": 11.7,
+        "sentiment_40": 20.28,
         "channel_quality_20": 20
       }
     },
@@ -270,16 +270,16 @@
     "total_views": 229600,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 1.76,
+      "avg_percentile_engagement_score": 34.34,
       "follower_ratio": 185.25,
-      "avg_positive_sentiment": 14.29
+      "sentiment_S_bar": 0.2194
     },
     "evaluation": {
-      "roi_score": 39.82,
-      "grade": "D (ไม่แนะนำ)",
+      "roi_score": 78.73,
+      "grade": "B (พอใช้ได้)",
       "score_breakdown": {
-        "engagement_40": 14.1,
-        "sentiment_40": 5.71,
+        "engagement_40": 34.34,
+        "sentiment_40": 24.39,
         "channel_quality_20": 20
       }
     },
@@ -292,16 +292,16 @@
     "total_views": 136600,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 0.7,
+      "avg_percentile_engagement_score": 16.98,
       "follower_ratio": 1.57,
-      "avg_positive_sentiment": 19.05
+      "sentiment_S_bar": 0.1472
     },
     "evaluation": {
-      "roi_score": 17.3,
-      "grade": "D (ไม่แนะนำ)",
+      "roi_score": 44.92,
+      "grade": "C (มีความเสี่ยง)",
       "score_breakdown": {
-        "engagement_40": 5.63,
-        "sentiment_40": 6.67,
+        "engagement_40": 16.98,
+        "sentiment_40": 22.94,
         "channel_quality_20": 5
       }
     },
@@ -314,16 +314,16 @@
     "total_views": 131200,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 1.12,
+      "avg_percentile_engagement_score": 26.79,
       "follower_ratio": 238.0,
-      "avg_positive_sentiment": 14.29
+      "sentiment_S_bar": 0.1741
     },
     "evaluation": {
-      "roi_score": 34.71,
-      "grade": "D (ไม่แนะนำ)",
+      "roi_score": 70.27,
+      "grade": "B (พอใช้ได้)",
       "score_breakdown": {
-        "engagement_40": 9.0,
-        "sentiment_40": 5.71,
+        "engagement_40": 26.79,
+        "sentiment_40": 23.48,
         "channel_quality_20": 20
       }
     },
@@ -336,16 +336,16 @@
     "total_views": 163800,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 0.62,
+      "avg_percentile_engagement_score": 13.96,
       "follower_ratio": 0.6,
-      "avg_positive_sentiment": 33.33
+      "sentiment_S_bar": 0.2994
     },
     "evaluation": {
-      "roi_score": 22.58,
-      "grade": "D (ไม่แนะนำ)",
+      "roi_score": 44.95,
+      "grade": "C (มีความเสี่ยง)",
       "score_breakdown": {
-        "engagement_40": 4.99,
-        "sentiment_40": 12.59,
+        "engagement_40": 13.96,
+        "sentiment_40": 25.99,
         "channel_quality_20": 5
       }
     },
@@ -358,16 +358,16 @@
     "total_views": 2900000,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 0.43,
+      "avg_percentile_engagement_score": 5.66,
       "follower_ratio": 82.0,
-      "avg_positive_sentiment": 19.61
+      "sentiment_S_bar": 0.1815
     },
     "evaluation": {
-      "roi_score": 30.5,
-      "grade": "D (ไม่แนะนำ)",
+      "roi_score": 49.29,
+      "grade": "C (มีความเสี่ยง)",
       "score_breakdown": {
-        "engagement_40": 3.44,
-        "sentiment_40": 7.06,
+        "engagement_40": 5.66,
+        "sentiment_40": 23.63,
         "channel_quality_20": 20
       }
     },
@@ -380,16 +380,16 @@
     "total_views": 267400,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 0.58,
+      "avg_percentile_engagement_score": 10.94,
       "follower_ratio": 705,
-      "avg_positive_sentiment": 15.09
+      "sentiment_S_bar": -0.3095
     },
     "evaluation": {
-      "roi_score": 24.65,
-      "grade": "D (ไม่แนะนำ)",
+      "roi_score": 44.75,
+      "grade": "C (มีความเสี่ยง)",
       "score_breakdown": {
-        "engagement_40": 4.65,
-        "sentiment_40": 0,
+        "engagement_40": 10.94,
+        "sentiment_40": 13.81,
         "channel_quality_20": 20
       }
     },
@@ -402,16 +402,16 @@
     "total_views": 5400000,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 0.46,
+      "avg_percentile_engagement_score": 6.42,
       "follower_ratio": 1465.26,
-      "avg_positive_sentiment": 17.65
+      "sentiment_S_bar": 0.1833
     },
     "evaluation": {
-      "roi_score": 30.72,
-      "grade": "D (ไม่แนะนำ)",
+      "roi_score": 50.08,
+      "grade": "C (มีความเสี่ยง)",
       "score_breakdown": {
-        "engagement_40": 3.66,
-        "sentiment_40": 7.06,
+        "engagement_40": 6.42,
+        "sentiment_40": 23.67,
         "channel_quality_20": 20
       }
     },
@@ -424,16 +424,16 @@
     "total_views": 268600,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 0.7,
+      "avg_percentile_engagement_score": 16.23,
       "follower_ratio": 46.64,
-      "avg_positive_sentiment": 5.56
+      "sentiment_S_bar": 0.0863
     },
     "evaluation": {
-      "roi_score": 27.79,
-      "grade": "D (ไม่แนะนำ)",
+      "roi_score": 57.95,
+      "grade": "C (มีความเสี่ยง)",
       "score_breakdown": {
-        "engagement_40": 5.57,
-        "sentiment_40": 2.22,
+        "engagement_40": 16.23,
+        "sentiment_40": 21.73,
         "channel_quality_20": 20
       }
     },
@@ -446,16 +446,16 @@
     "total_views": 5103400,
     "ad_ratio": "2/2",
     "metrics": {
-      "avg_engagement_rate_percent": 0.56,
+      "avg_percentile_engagement_score": 6.79,
       "follower_ratio": 8.46,
-      "avg_positive_sentiment": 47.05
+      "sentiment_S_bar": 0.2982
     },
     "evaluation": {
-      "roi_score": 32.98,
-      "grade": "D (ไม่แนะนำ)",
+      "roi_score": 42.76,
+      "grade": "C (มีความเสี่ยง)",
       "score_breakdown": {
-        "engagement_40": 4.47,
-        "sentiment_40": 18.51,
+        "engagement_40": 6.79,
+        "sentiment_40": 25.96,
         "channel_quality_20": 10
       }
     },
@@ -468,16 +468,16 @@
     "total_views": 8100000,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 0.82,
+      "avg_percentile_engagement_score": 20.75,
       "follower_ratio": 16600.0,
-      "avg_positive_sentiment": 10.81
+      "sentiment_S_bar": -0.0218
     },
     "evaluation": {
-      "roi_score": 28.14,
-      "grade": "D (ไม่แนะนำ)",
+      "roi_score": 60.32,
+      "grade": "B (พอใช้ได้)",
       "score_breakdown": {
-        "engagement_40": 6.52,
-        "sentiment_40": 1.62,
+        "engagement_40": 20.75,
+        "sentiment_40": 19.56,
         "channel_quality_20": 20
       }
     },
@@ -490,16 +490,16 @@
     "total_views": 674200,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 0.29,
+      "avg_percentile_engagement_score": 1.89,
       "follower_ratio": 0.9,
-      "avg_positive_sentiment": 16.67
+      "sentiment_S_bar": 0.1572
     },
     "evaluation": {
-      "roi_score": 13.7,
+      "roi_score": 30.03,
       "grade": "D (ไม่แนะนำ)",
       "score_breakdown": {
-        "engagement_40": 2.34,
-        "sentiment_40": 6.36,
+        "engagement_40": 1.89,
+        "sentiment_40": 23.14,
         "channel_quality_20": 5
       }
     },
@@ -512,16 +512,16 @@
     "total_views": 1038800,
     "ad_ratio": "0/2",
     "metrics": {
-      "avg_engagement_rate_percent": 2.02,
+      "avg_percentile_engagement_score": 35.85,
       "follower_ratio": 526666.67,
-      "avg_positive_sentiment": 13.9
+      "sentiment_S_bar": 0.1223
     },
     "evaluation": {
-      "roi_score": 41.16,
-      "grade": "C (มีความเสี่ยง)",
+      "roi_score": 78.3,
+      "grade": "B (พอใช้ได้)",
       "score_breakdown": {
-        "engagement_40": 16.12,
-        "sentiment_40": 5.04,
+        "engagement_40": 35.85,
+        "sentiment_40": 22.45,
         "channel_quality_20": 20
       }
     },
@@ -534,16 +534,16 @@
     "total_views": 5699000,
     "ad_ratio": "3/3",
     "metrics": {
-      "avg_engagement_rate_percent": 1.0,
+      "avg_percentile_engagement_score": 25.28,
       "follower_ratio": 1768.0,
-      "avg_positive_sentiment": 17.9
+      "sentiment_S_bar": 0.0375
     },
     "evaluation": {
-      "roi_score": 32.98,
-      "grade": "D (ไม่แนะนำ)",
+      "roi_score": 66.03,
+      "grade": "B (พอใช้ได้)",
       "score_breakdown": {
-        "engagement_40": 8.0,
-        "sentiment_40": 4.98,
+        "engagement_40": 25.28,
+        "sentiment_40": 20.75,
         "channel_quality_20": 20
       }
     },
@@ -556,16 +556,16 @@
     "total_views": 1222,
     "ad_ratio": "0/1",
     "metrics": {
-      "avg_engagement_rate_percent": 19.72,
+      "avg_percentile_engagement_score": 39.62,
       "follower_ratio": 1.37,
-      "avg_positive_sentiment": 40.0
+      "sentiment_S_bar": 0.3749
     },
     "evaluation": {
-      "roi_score": 61.0,
+      "roi_score": 72.12,
       "grade": "B (พอใช้ได้)",
       "score_breakdown": {
-        "engagement_40": 40,
-        "sentiment_40": 16.0,
+        "engagement_40": 39.62,
+        "sentiment_40": 27.5,
         "channel_quality_20": 5
       }
     },
@@ -578,16 +578,16 @@
     "total_views": 56400,
     "ad_ratio": "0/1",
     "metrics": {
-      "avg_engagement_rate_percent": 1.65,
+      "avg_percentile_engagement_score": 32.08,
       "follower_ratio": 10.72,
-      "avg_positive_sentiment": 27.27
+      "sentiment_S_bar": 0.2517
     },
     "evaluation": {
-      "roi_score": 44.14,
-      "grade": "C (มีความเสี่ยง)",
+      "roi_score": 77.11,
+      "grade": "B (พอใช้ได้)",
       "score_breakdown": {
-        "engagement_40": 13.23,
-        "sentiment_40": 10.91,
+        "engagement_40": 32.08,
+        "sentiment_40": 25.03,
         "channel_quality_20": 20
       }
     },
@@ -600,16 +600,16 @@
     "total_views": 1649900,
     "ad_ratio": "2/2",
     "metrics": {
-      "avg_engagement_rate_percent": 1.01,
+      "avg_percentile_engagement_score": 24.15,
       "follower_ratio": 4667.97,
-      "avg_positive_sentiment": 12.81
+      "sentiment_S_bar": 0.0352
     },
     "evaluation": {
-      "roi_score": 30.94,
-      "grade": "D (ไม่แนะนำ)",
+      "roi_score": 64.85,
+      "grade": "B (พอใช้ได้)",
       "score_breakdown": {
-        "engagement_40": 8.05,
-        "sentiment_40": 2.89,
+        "engagement_40": 24.15,
+        "sentiment_40": 20.7,
         "channel_quality_20": 20
       }
     },
@@ -622,16 +622,16 @@
     "total_views": 693800,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 0.39,
+      "avg_percentile_engagement_score": 3.4,
       "follower_ratio": 120.7,
-      "avg_positive_sentiment": 0.0
+      "sentiment_S_bar": -0.1817
     },
     "evaluation": {
-      "roi_score": 23.09,
+      "roi_score": 39.76,
       "grade": "D (ไม่แนะนำ)",
       "score_breakdown": {
-        "engagement_40": 3.09,
-        "sentiment_40": 0,
+        "engagement_40": 3.4,
+        "sentiment_40": 16.37,
         "channel_quality_20": 20
       }
     },
@@ -644,16 +644,16 @@
     "total_views": 1500000,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 0.2,
+      "avg_percentile_engagement_score": 1.13,
       "follower_ratio": 5.41,
-      "avg_positive_sentiment": 25.0
+      "sentiment_S_bar": 0.1051
     },
     "evaluation": {
-      "roi_score": 19.07,
+      "roi_score": 33.24,
       "grade": "D (ไม่แนะนำ)",
       "score_breakdown": {
-        "engagement_40": 1.57,
-        "sentiment_40": 7.5,
+        "engagement_40": 1.13,
+        "sentiment_40": 22.1,
         "channel_quality_20": 10
       }
     },
@@ -666,16 +666,16 @@
     "total_views": 2500000,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 0.36,
+      "avg_percentile_engagement_score": 2.64,
       "follower_ratio": 1838.89,
-      "avg_positive_sentiment": 38.89
+      "sentiment_S_bar": 0.2258
     },
     "evaluation": {
-      "roi_score": 35.13,
-      "grade": "D (ไม่แนะนำ)",
+      "roi_score": 47.16,
+      "grade": "C (มีความเสี่ยง)",
       "score_breakdown": {
-        "engagement_40": 2.91,
-        "sentiment_40": 12.22,
+        "engagement_40": 2.64,
+        "sentiment_40": 24.52,
         "channel_quality_20": 20
       }
     },
@@ -688,16 +688,16 @@
     "total_views": 4400000,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 1.52,
+      "avg_percentile_engagement_score": 30.57,
       "follower_ratio": 7012.5,
-      "avg_positive_sentiment": 5.81
+      "sentiment_S_bar": 0.0727
     },
     "evaluation": {
-      "roi_score": 34.04,
-      "grade": "D (ไม่แนะนำ)",
+      "roi_score": 72.02,
+      "grade": "B (พอใช้ได้)",
       "score_breakdown": {
-        "engagement_40": 12.18,
-        "sentiment_40": 1.86,
+        "engagement_40": 30.57,
+        "sentiment_40": 21.45,
         "channel_quality_20": 20
       }
     },
@@ -710,16 +710,16 @@
     "total_views": 49600,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 1.11,
+      "avg_percentile_engagement_score": 26.04,
       "follower_ratio": 0.91,
-      "avg_positive_sentiment": 0.0
+      "sentiment_S_bar": -0.1978
     },
     "evaluation": {
-      "roi_score": 13.9,
-      "grade": "D (ไม่แนะนำ)",
+      "roi_score": 47.08,
+      "grade": "C (มีความเสี่ยง)",
       "score_breakdown": {
-        "engagement_40": 8.9,
-        "sentiment_40": 0,
+        "engagement_40": 26.04,
+        "sentiment_40": 16.04,
         "channel_quality_20": 5
       }
     },
@@ -732,16 +732,16 @@
     "total_views": 203700,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 0.9,
+      "avg_percentile_engagement_score": 21.51,
       "follower_ratio": 1.1,
-      "avg_positive_sentiment": 72.55
+      "sentiment_S_bar": 0.7043
     },
     "evaluation": {
-      "roi_score": 40.87,
-      "grade": "C (มีความเสี่ยง)",
+      "roi_score": 60.6,
+      "grade": "B (พอใช้ได้)",
       "score_breakdown": {
-        "engagement_40": 7.24,
-        "sentiment_40": 28.63,
+        "engagement_40": 21.51,
+        "sentiment_40": 34.09,
         "channel_quality_20": 5
       }
     },
@@ -754,16 +754,16 @@
     "total_views": 351000,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 0.49,
+      "avg_percentile_engagement_score": 7.17,
       "follower_ratio": 6.18,
-      "avg_positive_sentiment": 13.89
+      "sentiment_S_bar": 0.0763
     },
     "evaluation": {
-      "roi_score": 18.36,
+      "roi_score": 38.7,
       "grade": "D (ไม่แนะนำ)",
       "score_breakdown": {
-        "engagement_40": 3.92,
-        "sentiment_40": 4.44,
+        "engagement_40": 7.17,
+        "sentiment_40": 21.53,
         "channel_quality_20": 10
       }
     },
@@ -776,16 +776,16 @@
     "total_views": 35200,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 0.95,
+      "avg_percentile_engagement_score": 22.26,
       "follower_ratio": 0.86,
-      "avg_positive_sentiment": 20.0
+      "sentiment_S_bar": -0.0677
     },
     "evaluation": {
-      "roi_score": 16.59,
-      "grade": "D (ไม่แนะนำ)",
+      "roi_score": 45.91,
+      "grade": "C (มีความเสี่ยง)",
       "score_breakdown": {
-        "engagement_40": 7.59,
-        "sentiment_40": 4.0,
+        "engagement_40": 22.26,
+        "sentiment_40": 18.65,
         "channel_quality_20": 5
       }
     },
@@ -798,16 +798,16 @@
     "total_views": 243200,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 0.5,
+      "avg_percentile_engagement_score": 7.92,
       "follower_ratio": 3.09,
-      "avg_positive_sentiment": 5.49
+      "sentiment_S_bar": 0.0494
     },
     "evaluation": {
-      "roi_score": 15.78,
+      "roi_score": 38.91,
       "grade": "D (ไม่แนะนำ)",
       "score_breakdown": {
-        "engagement_40": 4.02,
-        "sentiment_40": 1.76,
+        "engagement_40": 7.92,
+        "sentiment_40": 20.99,
         "channel_quality_20": 10
       }
     },
@@ -820,16 +820,16 @@
     "total_views": 203700,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 0.74,
+      "avg_percentile_engagement_score": 18.49,
       "follower_ratio": 115.65,
-      "avg_positive_sentiment": 7.69
+      "sentiment_S_bar": 0.0042
     },
     "evaluation": {
-      "roi_score": 27.48,
-      "grade": "D (ไม่แนะนำ)",
+      "roi_score": 58.57,
+      "grade": "C (มีความเสี่ยง)",
       "score_breakdown": {
-        "engagement_40": 5.94,
-        "sentiment_40": 1.54,
+        "engagement_40": 18.49,
+        "sentiment_40": 20.08,
         "channel_quality_20": 20
       }
     },
@@ -842,16 +842,16 @@
     "total_views": 59300,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 0.72,
+      "avg_percentile_engagement_score": 17.74,
       "follower_ratio": 61.09,
-      "avg_positive_sentiment": 11.11
+      "sentiment_S_bar": 0.0676
     },
     "evaluation": {
-      "roi_score": 30.22,
-      "grade": "D (ไม่แนะนำ)",
+      "roi_score": 59.09,
+      "grade": "C (มีความเสี่ยง)",
       "score_breakdown": {
-        "engagement_40": 5.77,
-        "sentiment_40": 4.44,
+        "engagement_40": 17.74,
+        "sentiment_40": 21.35,
         "channel_quality_20": 20
       }
     },
@@ -864,16 +864,16 @@
     "total_views": 2200000,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 0.67,
+      "avg_percentile_engagement_score": 15.47,
       "follower_ratio": 7.41,
-      "avg_positive_sentiment": 24.24
+      "sentiment_S_bar": 0.0753
     },
     "evaluation": {
-      "roi_score": 22.0,
-      "grade": "D (ไม่แนะนำ)",
+      "roi_score": 46.98,
+      "grade": "C (มีความเสี่ยง)",
       "score_breakdown": {
-        "engagement_40": 5.34,
-        "sentiment_40": 6.67,
+        "engagement_40": 15.47,
+        "sentiment_40": 21.51,
         "channel_quality_20": 10
       }
     },
@@ -886,16 +886,16 @@
     "total_views": 83900,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 0.61,
+      "avg_percentile_engagement_score": 12.45,
       "follower_ratio": 12.48,
-      "avg_positive_sentiment": 77.42
+      "sentiment_S_bar": 0.6949
     },
     "evaluation": {
-      "roi_score": 55.2,
-      "grade": "C (มีความเสี่ยง)",
+      "roi_score": 66.35,
+      "grade": "B (พอใช้ได้)",
       "score_breakdown": {
-        "engagement_40": 4.88,
-        "sentiment_40": 30.32,
+        "engagement_40": 12.45,
+        "sentiment_40": 33.9,
         "channel_quality_20": 20
       }
     },
@@ -908,16 +908,16 @@
     "total_views": 142000,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 0.78,
+      "avg_percentile_engagement_score": 20.0,
       "follower_ratio": 142.46,
-      "avg_positive_sentiment": 9.52
+      "sentiment_S_bar": 0.0522
     },
     "evaluation": {
-      "roi_score": 28.61,
-      "grade": "D (ไม่แนะนำ)",
+      "roi_score": 61.04,
+      "grade": "B (พอใช้ได้)",
       "score_breakdown": {
-        "engagement_40": 6.23,
-        "sentiment_40": 2.38,
+        "engagement_40": 20.0,
+        "sentiment_40": 21.04,
         "channel_quality_20": 20
       }
     },
@@ -930,16 +930,16 @@
     "total_views": 12900000,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 2.05,
+      "avg_percentile_engagement_score": 35.85,
       "follower_ratio": 4272.22,
-      "avg_positive_sentiment": 20.0
+      "sentiment_S_bar": 0.0424
     },
     "evaluation": {
-      "roi_score": 40.37,
-      "grade": "C (มีความเสี่ยง)",
+      "roi_score": 76.7,
+      "grade": "B (พอใช้ได้)",
       "score_breakdown": {
-        "engagement_40": 16.37,
-        "sentiment_40": 4.0,
+        "engagement_40": 35.85,
+        "sentiment_40": 20.85,
         "channel_quality_20": 20
       }
     },
@@ -952,16 +952,16 @@
     "total_views": 291300,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 1.69,
+      "avg_percentile_engagement_score": 32.83,
       "follower_ratio": 13.88,
-      "avg_positive_sentiment": 42.37
+      "sentiment_S_bar": 0.3685
     },
     "evaluation": {
-      "roi_score": 49.43,
-      "grade": "C (มีความเสี่ยง)",
+      "roi_score": 80.2,
+      "grade": "A (แนะนำจ้าง)",
       "score_breakdown": {
-        "engagement_40": 13.5,
-        "sentiment_40": 15.93,
+        "engagement_40": 32.83,
+        "sentiment_40": 27.37,
         "channel_quality_20": 20
       }
     },
@@ -974,16 +974,16 @@
     "total_views": 40600,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 4.91,
+      "avg_percentile_engagement_score": 38.87,
       "follower_ratio": 4704.3,
-      "avg_positive_sentiment": 6.67
+      "sentiment_S_bar": 0.0013
     },
     "evaluation": {
-      "roi_score": 60.58,
+      "roi_score": 78.89,
       "grade": "B (พอใช้ได้)",
       "score_breakdown": {
-        "engagement_40": 39.25,
-        "sentiment_40": 1.33,
+        "engagement_40": 38.87,
+        "sentiment_40": 20.03,
         "channel_quality_20": 20
       }
     },
@@ -996,16 +996,16 @@
     "total_views": 22700000,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 2.63,
+      "avg_percentile_engagement_score": 37.36,
       "follower_ratio": 2931.84,
-      "avg_positive_sentiment": 41.67
+      "sentiment_S_bar": 0.3614
     },
     "evaluation": {
-      "roi_score": 57.7,
-      "grade": "C (มีความเสี่ยง)",
+      "roi_score": 84.59,
+      "grade": "A (แนะนำจ้าง)",
       "score_breakdown": {
-        "engagement_40": 21.03,
-        "sentiment_40": 16.67,
+        "engagement_40": 37.36,
+        "sentiment_40": 27.23,
         "channel_quality_20": 20
       }
     },
@@ -1018,16 +1018,16 @@
     "total_views": 1600000,
     "ad_ratio": "1/1",
     "metrics": {
-      "avg_engagement_rate_percent": 1.25,
+      "avg_percentile_engagement_score": 28.3,
       "follower_ratio": 520.83,
-      "avg_positive_sentiment": 1.82
+      "sentiment_S_bar": -0.1294
     },
     "evaluation": {
-      "roi_score": 29.98,
-      "grade": "D (ไม่แนะนำ)",
+      "roi_score": 65.71,
+      "grade": "B (พอใช้ได้)",
       "score_breakdown": {
-        "engagement_40": 9.98,
-        "sentiment_40": 0,
+        "engagement_40": 28.3,
+        "sentiment_40": 17.41,
         "channel_quality_20": 20
       }
     },
@@ -1040,16 +1040,16 @@
     "total_views": 500600,
     "ad_ratio": "0/1",
     "metrics": {
-      "avg_engagement_rate_percent": 3.26,
+      "avg_percentile_engagement_score": 38.11,
       "follower_ratio": 1009.87,
-      "avg_positive_sentiment": 28.12
+      "sentiment_S_bar": 0.3079
     },
     "evaluation": {
-      "roi_score": 56.68,
-      "grade": "C (มีความเสี่ยง)",
+      "roi_score": 84.27,
+      "grade": "A (แนะนำจ้าง)",
       "score_breakdown": {
-        "engagement_40": 26.06,
-        "sentiment_40": 10.62,
+        "engagement_40": 38.11,
+        "sentiment_40": 26.16,
         "channel_quality_20": 20
       }
     },
