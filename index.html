@@ -5,92 +5,212 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GadgetROI — ประเมินความคุ้มค่า Influencer</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; padding: 20px; color: #333; }
-        h1 { text-align: center; margin-bottom: 5px; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; padding: 20px; color: #333; margin: 0; }
+        h1 { text-align: center; margin-bottom: 5px; color: #2c3e50; }
         p.subtitle { text-align: center; color: #7f8c8d; margin-bottom: 25px; font-size: 14px; }
+        
         .summary { display: flex; justify-content: center; gap: 20px; margin-bottom: 30px; flex-wrap: wrap; }
-        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; min-width: 150px;}
-        .card h3 { margin-top: 0; font-size: 16px; color: #666; }
-        .card h2 { margin: 10px 0 0 0; font-size: 28px; }
-        table { width: 100%; border-collapse: collapse; background: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        th, td { padding: 15px; text-align: left; border-bottom: 1px solid #eee; }
-        th { background-color: #2c3e50; color: white; }
-        tr:hover { background-color: #f9f9f9; }
+        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; min-width: 150px; border-top: 4px solid #3498db; }
+        .card h3 { margin-top: 0; font-size: 14px; color: #7f8c8d; text-transform: uppercase; letter-spacing: 1px; }
+        .card h2 { margin: 10px 0 0 0; font-size: 32px; }
+        
+        .table-container { overflow-x: auto; background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); padding: 1px; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 15px 20px; text-align: left; border-bottom: 1px solid #ecf0f1; }
+        th { background-color: #2c3e50; color: white; font-weight: 500; white-space: nowrap; }
+        tr:hover { background-color: #f8f9fa; }
+        
         .grade-A { color: #27ae60; font-weight: bold; }
         .grade-B { color: #2980b9; font-weight: bold; }
         .grade-C { color: #f39c12; font-weight: bold; }
         .grade-D { color: #c0392b; font-weight: bold; }
-        a.btn { background-color: #3498db; color: white; padding: 6px 12px; text-decoration: none; border-radius: 4px; font-size: 14px; }
-        a.btn:hover { background-color: #2980b9; }
-        .badge-info { background-color: #95a5a6; color: white; font-size: 11px; padding: 3px 6px; border-radius: 10px; margin-left: 5px; }
+        
+        button.btn-detail { background-color: #3498db; color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer; font-size: 13px; transition: 0.2s; }
+        button.btn-detail:hover { background-color: #2980b9; }
+        a.btn-outline { display: inline-block; border: 1px solid #3498db; color: #3498db; padding: 6px 12px; text-decoration: none; border-radius: 4px; font-size: 13px; margin-top: 10px; transition: 0.2s; }
+        a.btn-outline:hover { background-color: #3498db; color: white; }
+        
+        /* Tooltip CSS */
+        .tooltip { position: relative; cursor: help; border-bottom: 1px dotted #7f8c8d; }
+        .tooltip .tooltiptext { visibility: hidden; width: 280px; background-color: #34495e; color: #fff; text-align: left; border-radius: 6px; padding: 12px; position: absolute; z-index: 10; bottom: 125%; left: 50%; transform: translateX(-50%); opacity: 0; transition: opacity 0.3s; font-size: 12px; font-weight: normal; line-height: 1.5; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .tooltip .tooltiptext::after { content: ""; position: absolute; top: 100%; left: 50%; margin-left: -5px; border-width: 5px; border-style: solid; border-color: #34495e transparent transparent transparent; }
+        .tooltip:hover .tooltiptext { visibility: visible; opacity: 1; }
+
+        /* Modal CSS */
+        .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 100; justify-content: center; align-items: center; }
+        .modal-content { background: white; padding: 30px; border-radius: 12px; width: 90%; max-width: 450px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); position: relative; }
+        .modal-close { position: absolute; top: 15px; right: 20px; font-size: 24px; cursor: pointer; color: #7f8c8d; border: none; background: transparent; }
+        .modal-header h2 { margin: 0 0 5px 0; color: #2c3e50; }
+        .modal-meta { font-size: 13px; color: #7f8c8d; margin-bottom: 20px; border-bottom: 1px solid #ecf0f1; padding-bottom: 15px; }
+        .modal-score-row { display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 15px; }
+        .modal-score-row.total { border-top: 2px solid #ecf0f1; padding-top: 15px; margin-top: 5px; font-weight: bold; font-size: 18px; }
+        .modal-note { font-size: 12px; color: #95a5a6; margin-top: 5px; font-style: italic; }
     </style>
 </head>
 <body>
     <h1>📊 GadgetROI Dashboard</h1>
-    <p class="subtitle">⚠️ หมายเหตุ: ROI Score ในที่นี้ประเมินจาก Engagement และ Sentiment เป็นหลัก (ไม่ใช่ยอดขายจริง)</p>
+    <p class="subtitle">
+        <span class="tooltip">Composite Proxy Score
+            <span class="tooltiptext">คะแนนนี้เป็น Proxy Score ที่ประเมินจากความผูกพัน (Engagement), อารมณ์ความรู้สึก (Sentiment) และคุณภาพช่อง (Channel Quality) ของผู้ชม ไม่ใช่การการันตี Financial ROI จากยอดขาย กำไร หรือต้นทุนจริง</span>
+        </span>
+    </p>
 
     <div class="summary" id="summary-cards">
-        <!-- ข้อมูลสรุปจะถูกแทรกตรงนี้ -->
+        <!-- Summary Cards -->
     </div>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Influencer</th>
-                <th>ฐานคนดูรวม (ยอดวิว)</th>
-                <th>Avg. Engagement Rate</th>
-                <th>คะแนน Sentiment</th>
-                <th>ROI Score</th>
-                <th>เกรดประเมิน</th>
-                <th>ตรวจสอบ</th>
-            </tr>
-        </thead>
-        <tbody id="table-body">
-            <!-- ข้อมูลตารางจะถูกแทรกตรงนี้ -->
-        </tbody>
-    </table>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Influencer</th>
+                    <th>Clips</th>
+                    <th>Views</th>
+                    <th>
+                        <span class="tooltip">Engagement Score
+                            <span class="tooltiptext">คะแนนความผูกพันถูกประเมินจาก Percentile ของข้อมูลที่นำมาวิเคราะห์ (ไม่ใช่ ER %)</span>
+                        </span>
+                    </th>
+                    <th>Sentiment Score</th>
+                    <th>ROI Score</th>
+                    <th>Grade</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <!-- Table Rows -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal (Detail View) -->
+    <div class="modal-overlay" id="detail-modal" onclick="closeModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal(event)">&times;</button>
+            <div class="modal-header">
+                <h2 id="modal-name">@creator</h2>
+                <div class="modal-meta" id="modal-meta">
+                    Followers: - | Videos: - | Views: - | Ads: -
+                </div>
+            </div>
+            
+            <div class="modal-score-row">
+                <span>Engagement</span>
+                <span id="modal-eng">0 / 40</span>
+            </div>
+            <div class="modal-score-row">
+                <span>Sentiment</span>
+                <span id="modal-sent">0 / 40</span>
+            </div>
+            <div class="modal-note" id="modal-sbar" style="margin-top: -8px; margin-bottom: 12px; text-align: right;">
+                Sentiment S̄ = 0
+            </div>
+            <div class="modal-score-row">
+                <span>Channel Quality</span>
+                <span id="modal-cq">0 / 20</span>
+            </div>
+            <div class="modal-note" id="modal-fratio" style="margin-top: -8px; margin-bottom: 15px; text-align: right;">
+                Follower Ratio: 0
+            </div>
+            
+            <div class="modal-score-row total">
+                <span>GadgetROI Score</span>
+                <span id="modal-roi" style="color: #2980b9;">0 / 100</span>
+            </div>
+            <div class="modal-score-row" style="margin-top: -5px;">
+                <span>Grade</span>
+                <span id="modal-grade" class="grade-A">A</span>
+            </div>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="#" id="modal-video-link" target="_blank" class="btn-outline">ดูคลิปตัวอย่าง</a>
+            </div>
+        </div>
+    </div>
 
     <script>
+        window.influencerData = [];
+
         async function fetchData() {
             try {
                 const response = await fetch('http://127.0.0.1:8000/api/scores');
                 const result = await response.json();
 
                 if(result.status === "success") {
+                    window.influencerData = result.data.sort((a, b) => b.evaluation.roi_score - a.evaluation.roi_score);
+                    
+                    // Render Summary Cards
                     const dist = result.summary.grade_distribution;
                     document.getElementById('summary-cards').innerHTML = `
-                        <div class="card"><h3>วิเคราะห์ Influencer รวม</h3><h2>${result.data.length} คน</h2></div>
-                        <div class="card"><h3 class="grade-A">เกรด A (แนะนำจ้าง)</h3><h2 class="grade-A">${dist.A || 0}</h2></div>
-                        <div class="card"><h3 class="grade-B">เกรด B (พอใช้ได้)</h3><h2 class="grade-B">${dist.B || 0}</h2></div>
-                        <div class="card"><h3 class="grade-C">เกรด C (มีความเสี่ยง)</h3><h2 class="grade-C">${dist.C || 0}</h2></div>
-                        <div class="card"><h3 class="grade-D">เกรด D (ไม่แนะนำ)</h3><h2 class="grade-D">${dist.D || 0}</h2></div>
+                        <div class="card"><h3>Influencers Analyzed</h3><h2>${result.data.length}</h2></div>
+                        <div class="card"><h3 class="grade-A">Grade A</h3><h2 class="grade-A">${dist.A || 0}</h2></div>
+                        <div class="card"><h3 class="grade-B">Grade B</h3><h2 class="grade-B">${dist.B || 0}</h2></div>
+                        <div class="card"><h3 class="grade-C">Grade C</h3><h2 class="grade-C">${dist.C || 0}</h2></div>
+                        <div class="card"><h3 class="grade-D">Grade D</h3><h2 class="grade-D">${dist.D || 0}</h2></div>
                     `;
 
+                    // Render Table
                     const tbody = document.getElementById('table-body');
-                    // เรียงคะแนน ROI จากมากไปน้อย
-                    const sortedData = result.data.sort((a, b) => b.evaluation.roi_score - a.evaluation.roi_score);
                     
-                    sortedData.forEach(v => {
+                    window.influencerData.forEach((v, index) => {
                         const eval = v.evaluation;
                         const gradeClass = eval.grade.charAt(0); 
                         
                         const row = `<tr>
-                            <td><b>${v.author_name}</b> <span class="badge-info">วิเคราะห์ ${v.analyzed_videos_count} คลิป</span><br>
-                                <span style="color:#7f8c8d; font-size:12px;">ผู้ติดตาม: ${v.followers.toLocaleString()} | โฆษณา: ${v.ad_ratio}</span></td>
+                            <td><b>${v.author_name}</b><br><span style="color:#7f8c8d; font-size:12px;">ผู้ติดตาม: ${v.followers.toLocaleString()}</span></td>
+                            <td>${v.analyzed_videos_count}</td>
                             <td>${v.total_views.toLocaleString()}</td>
-                            <td>${v.metrics.avg_engagement_rate_percent}%<br><span style="color:#7f8c8d; font-size:12px;">(ได้ ${eval.score_breakdown.engagement_40}/40)</span></td>
-                            <td>${eval.score_breakdown.sentiment_40} / 40<br><span style="color:#7f8c8d; font-size:12px;">(เชิงบวกเฉลี่ย ${v.metrics.avg_positive_sentiment}%)</span></td>
-                            <td style="font-size: 18px; font-weight: bold;">${eval.roi_score}</td>
+                            <td>${eval.score_breakdown.engagement_40} / 40</td>
+                            <td>${eval.score_breakdown.sentiment_40} / 40</td>
+                            <td style="font-size: 16px; font-weight: bold;">${eval.roi_score}</td>
                             <td class="grade-${gradeClass}">${eval.grade}</td>
-                            <td><a href="${v.sample_video_url}" target="_blank" class="btn">คลิปตัวอย่าง</a></td>
+                            <td><button class="btn-detail" onclick="openModal(${index})">ดูรายละเอียด</button></td>
                         </tr>`;
                         tbody.innerHTML += row;
                     });
                 }
             } catch (error) {
                 console.error("Error fetching data:", error);
-                document.getElementById('table-body').innerHTML = '<tr><td colspan="7" style="text-align:center; color:red; padding: 30px;"><b>เชื่อมต่อ API ไม่ได้:</b> ตรวจสอบให้แน่ใจว่าเซิร์ฟเวอร์รันอยู่ (uvicorn api:app --reload)</td></tr>';
+                document.getElementById('table-body').innerHTML = '<tr><td colspan="8" style="text-align:center; color:red; padding: 30px;"><b>เชื่อมต่อ API ไม่ได้:</b> ตรวจสอบให้แน่ใจว่าเซิร์ฟเวอร์ Backend รันอยู่</td></tr>';
             }
+        }
+
+        // Modal Logic
+        function openModal(index) {
+            const v = window.influencerData[index];
+            const eval = v.evaluation;
+            const metrics = v.metrics;
+            const gradeClass = eval.grade.charAt(0);
+
+            // แปลงค่า S_bar เป็นข้อความ
+            let sBarTrend = "Neutral";
+            if (metrics.sentiment_S_bar > 0) sBarTrend = "Positive tendency";
+            else if (metrics.sentiment_S_bar < 0) sBarTrend = "Negative tendency";
+
+            // ยัดข้อมูลลง Modal
+            document.getElementById('modal-name').innerText = `@${v.author_name}`;
+            document.getElementById('modal-meta').innerText = `Followers: ${v.followers.toLocaleString()} | Videos: ${v.analyzed_videos_count} | Views: ${v.total_views.toLocaleString()} | Ads: ${v.ad_ratio} clips`;
+            
+            document.getElementById('modal-eng').innerText = `${eval.score_breakdown.engagement_40} / 40`;
+            document.getElementById('modal-sent').innerText = `${eval.score_breakdown.sentiment_40} / 40`;
+            document.getElementById('modal-sbar').innerText = `Sentiment S̄ = ${metrics.sentiment_S_bar > 0 ? '+' : ''}${metrics.sentiment_S_bar.toFixed(3)} (${sBarTrend})`;
+            
+            document.getElementById('modal-cq').innerText = `${eval.score_breakdown.channel_quality_20} / 20`;
+            document.getElementById('modal-fratio').innerText = `Follower Ratio: ${metrics.follower_ratio}`;
+            
+            document.getElementById('modal-roi').innerText = `${eval.roi_score} / 100`;
+            document.getElementById('modal-grade').innerText = eval.grade;
+            document.getElementById('modal-grade').className = `grade-${gradeClass}`;
+            
+            document.getElementById('modal-video-link').href = v.sample_video_url;
+
+            // แสดง Modal
+            document.getElementById('detail-modal').style.display = 'flex';
+        }
+
+        function closeModal(event) {
+            if(event) event.stopPropagation();
+            document.getElementById('detail-modal').style.display = 'none';
         }
 
         fetchData();
